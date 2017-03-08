@@ -1,0 +1,38 @@
+title: The HIDIOT
+description: The Hardware Hacking Starter Kit for Parents and Kids
+baseurl: ""
+url: https://hidiot.com
+twitter_url: https://twitter.com/rawhex
+facebook_url: https://facebook.com/rawhex
+reddit_url: https://reddit.com/r/hidiot
+copyright_year: 2017
+copyright_slug: All Rights Reserved.
+copyright_company: Raw Hex Ltd.
+copyright_country: United Kingdom
+copyright_url: https://rawhex.com
+
+collections:
+  events:
+    output: true
+    permalink: /:collection/:year/:month/:title.html
+  faq:
+    output: true
+    permalink: /:collection/:year/:month/:title.html
+
+pagination:
+  enabled: true
+  permalink: '/page/:num/'
+  title: ':title - page :num'
+  limit: 0
+
+permalink: /:collection/:year/:month/:title.html
+markdown: kramdown
+theme: hidiot-theme
+future: true # render posts in the future, to enable events
+gems:
+  - jekyll-feed
+  - jekyll-paginate-v2
+  - jekyll-minifier
+exclude:
+  - Gemfile
+  - Gemfile.lock
