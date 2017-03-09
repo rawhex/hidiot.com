@@ -1,12 +1,13 @@
 ---
-layout:     post
-title:      "Getting Started With HIDIOT"
-date:       2017-02-10 12:00:00 +0000
-author:     Steve
-categories: hidiot
-color:      blue
-image:      /assets/images/posts/getting-started.jpg
-image_alt:  "Getting Stated With HIDIOT"
+layout:          post
+title:           "Getting Started With HIDIOT"
+date:            2017-02-10 12:00:00 +0000
+author:          Steve
+categories:      hidiot
+color:           blue
+image:           /assets/images/posts/getting-started-orig.jpg
+image_alt:       "Getting Stated With HIDIOT"
+masthead_image:  /assets/images/posts/getting-started.jpg
 ---
 Our original HIDIOT prototype used for the 44CON badge was a massive hit at the event. Over 100 badges were assembled over a two day period, and we could’ve gone on for longer! Many thanks to Tomasz Miklas for running the table, and to everyone involved in making the HIDIOT badge happen!
 

@@ -1,12 +1,13 @@
 ---
-layout:     post
-title:      "Digistump and the HIDIOT"
-date:       2017-02-12 12:00:00 +0000
-author:     Steve
-categories: hidiot digistump
-color:      red
-image:      /assets/images/posts/digistump.jpg
-image_alt:  "Digistump"
+layout:          post
+title:           "Digistump and the HIDIOT"
+date:            2017-02-12 12:00:00 +0000
+author:          Steve
+categories:      hidiot digistump
+color:           red
+image:           /assets/images/posts/digistump-orig.jpg
+image_alt:       "Digistump"
+masthead_image:  /assets/images/posts/digistump.jpg
 ---
 Very kindly the incredible people at Digistump (home of the awesome Digispark) have allowed us to continue using their software into the HIDIOT’s production. This means several awesome things:
 
