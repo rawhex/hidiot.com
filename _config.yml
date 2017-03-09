@@ -2,6 +2,7 @@ title: The HIDIOT
 description: The Hardware Hacking Starter Kit for Parents and Kids
 baseurl: ""
 url: https://hidiot.com
+fullurl: https://hidiot.com # docker env workaround
 twitter_url: https://twitter.com/rawhex
 facebook_url: https://facebook.com/rawhex
 reddit_url: https://reddit.com/r/hidiot
