@@ -1,7 +1,9 @@
 ---
 layout: home
 title: Home
+permalink: /
 navigation_weight: 10
+navigation_url: /
 
 masthead_image:           /assets/images/masthead.jpg
 masthead_text:            Welcome to the HIDIOT
