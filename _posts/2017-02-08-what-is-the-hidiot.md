@@ -6,6 +6,7 @@ author:     Steve
 categories: hidiot
 color:      yellow
 image:      /assets/images/posts/getting-started.jpg
+image_alt:  "What is the HIDIOT?"
 ---
 The Human Interface Device Input/Output Toolkit (HIDIOT) is a tool designed to help people learn how to hack hardware, through the medium of hardware hacking. We started work on HIDIOT back in early 2016 with the idea of creating a simple USB Human Interface Device tool that anyone could assemble, and quickly worked on making it the official badge for UK security event 44CON.
 
