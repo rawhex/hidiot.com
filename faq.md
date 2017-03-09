@@ -1,8 +1,8 @@
 ---
 layout: faq
-title: FAQ
+title: Learn
 permalink: /faq/
-navigation_weight: 30
+navigation_weight: 50
 navigation_url: /faq/
 
 masthead_image:     
