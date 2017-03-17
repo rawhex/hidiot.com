@@ -37,4 +37,8 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - Rakefile
+  - README.md
+  - Dockerfile
+  - docker-compose.yml
   - vendor/bundle
