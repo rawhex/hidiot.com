@@ -23,3 +23,4 @@ collections:
       - {label: "Featured Image", name: "image", widget: "image"}
       - {label: "Image Alt Text", name: "image_alt", widget: "string"}
       - {label: "Masthead Image", name: "masthead_image", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
