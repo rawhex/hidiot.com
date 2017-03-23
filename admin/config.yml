@@ -1,0 +1,25 @@
+backend:
+  name: github
+  repo: "rawhex/hidiot.com"
+  branch: development
+
+publish_mode: editorial_workflow
+media_folder: "assets/images/posts"
+public_folder: "/assets/images/posts"
+
+collections:
+  - name: "posts"
+    label: "Blog"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Author", name: "author", widget: "string", default "Steve"}
+      - {label: "Categories (space-separated)", name: "categories", widget: "string"}
+      - {label: "Colour", name: "color", widget: "string"}
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Image Alt Text", name: "image_alt", widget: "string"}
+      - {label: "Masthead Image", name: "masthead_image", widget: "image"}
