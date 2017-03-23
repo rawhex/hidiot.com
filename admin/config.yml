@@ -16,10 +16,11 @@ collections:
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Publish Date (YYYY-MM-DD HH:MM:SS +0000)", name: "date", widget: "datetime"}
       - {label: "Author", name: "author", widget: "string", default "Steve"}
       - {label: "Categories (space-separated)", name: "categories", widget: "string"}
-      - {label: "Colour", name: "color", widget: "string"}
+      - {label: "Colour (green, blue, violet, orange, red, or yellow)", name: "color", widget: "string"}
       - {label: "Featured Image", name: "image", widget: "image"}
       - {label: "Image Alt Text", name: "image_alt", widget: "string"}
       - {label: "Masthead Image", name: "masthead_image", widget: "image"}
+      - {label: "Body (Rich Text Editor by default; highlight text and click <> to view Markdown)", name: "body", widget: "markdown"}
