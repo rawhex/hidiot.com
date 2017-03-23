@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: "rawhex/hidiot.com"
-  branch: development
+  branch: master
 
 publish_mode: editorial_workflow
 media_folder: "assets/images/posts"
