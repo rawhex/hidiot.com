@@ -5,7 +5,7 @@ permalink: /faq/
 navigation_weight: 50
 navigation_url: /faq/
 
-masthead_image:     
+masthead_image:     /assets/images/masthead-08c-constructed.jpg
 masthead_text:      FAQ
 masthead_subtext:   Frequently Asked Questions
 masthead_url:       
