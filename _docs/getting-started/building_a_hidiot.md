@@ -8,7 +8,7 @@ Building a HIDIOT is easy. We designed it so that it's really hard to get wrong.
 
 > This project involves soldering. Children should always be supervised when soldering, especially when they've never tried before. Parents should try this first, then give children the opportunity to try out soldering different parts under adult supervision. **Never** let children near hot soldering irons unsupervised.
 
-### What You Will Learn
+## What You Will Learn
 
 * How to build a HIDIOT
 * What each part does
@@ -16,7 +16,7 @@ Building a HIDIOT is easy. We designed it so that it's really hard to get wrong.
 * Soldering skills
 * How to test a PCB
 
-### What You Will Need
+## What You Will Need
 
 * Your HIDIOT parts kit
 * A HIDIOT Printed Circuit Board (PCB)
@@ -31,7 +31,7 @@ If you're unfamiliar with soldering, you should also get:
 * A piece of stripboard or veroboard to practice with
 * Some practice components (any will do, spare resistors and LEDs are good)
 
-### What Is Soldering?
+## What Is Soldering?
 
 Soldering is a way of sticking two things together with a metal (called solder). It's a bit like hot glue, but hotter and with molten metal.
 
@@ -52,7 +52,7 @@ Don't worry if this sounds a little too much to start with. [Gwendoline at iFixi
 
 Once you're happy with your soldering on a stripboard, you're ready to start. If you haven't soldered before and don't have a stripboard, you might want to try one of our workshops.
 
-### Building the HIDIOT
+## Building the HIDIOT
 
 There's a good order to build the HIDIOT. If you're happy using helping hands, the order doesn't matter! If you don't have or use a pair of helping hands you'll want to follow this order.
 
@@ -66,7 +66,7 @@ We solder the smallest parts first, then the bigger parts at the end. It should 
 
 > Always remember to stay safe when soldering. Use a ventilated space, wear safety goggles if possible and **never** touch the hot end of the iron.
 
-#### Soldering R1 - R4
+### Soldering R1 - R4
 
 The resistors are what we call passive components. They're unpolarized and don't care which way round they go. On the bottom of the board there's space for four resistors, called R1 through R4. It's generally tidier to keep them oriented the same way, but you can put the resistors in any direction you like. After all, it's *your* HIDIOT.
 
@@ -81,7 +81,7 @@ Now you can solder the resistors to the board. Apply the heat first, then the so
 
 > Try not to leave the soldering iron on the board for too long. The HIDIOT board is extra thick, so you can leave the soldering iron on longer than usual without damaging it, but if you're struggling, take the iron off the board, let it cool down for 10 seconds and try again.
 
-#### Diodes
+### Diodes
 
 Ok, next up we need to put in our diodes. Diodes do several different things, but mostly make sure only a certain amount of current and voltage flows in a certain direction. We use two types of diodes - two Zener diodes and a 1N456A.
 
@@ -103,7 +103,7 @@ Before you do any soldering, make sure you're happy with the orientation of the 
 
 If you get it wrong, you'll have to desolder the diodes and start again. For this reason, if you're not sure about the diodes at this point you can check them with a multimeter or leave the legs unsnipped until it's all working.
 
-#### R5 and the C1 Transistor
+### R5 and the C1 Transistor
 
 Now we have our other resistors and the diodes in place, we're almost electrically complete!
 
@@ -115,7 +115,7 @@ Neither R5 nor C1 care about which way round they go, so put them through their 
 
 Once they're through and the legs are bent back you should be ready to solder them in.
 
-#### The DIP Socket
+### The DIP Socket
 
 Our ATTiny85 uses a DIP socket to allow you to swap out ATTiny85 chips. If you build your own projects this is really handy for updating software and prototyping new projects with your HIDIOT.
 
@@ -137,7 +137,7 @@ The DIP socket pins aren't very long, so it helps to push down on the board a li
 
 Soldering the corner pins first will ensure that the pins are fully through the board and make it easier to solder later on.
 
-#### LEDs
+### LEDs
 
 There are two LEDs on the board. One is a power LED that is always on when power is connected. The other is a programmable LED called LED1. Both of these are optional, but recommended for beginners.
 
@@ -149,7 +149,7 @@ As with any other diode, check your orientation before soldering, and if you're 
 
 If you make a mistake, the LEDs won't light up but the board will still work.
 
-#### C2, The Big Capacitor
+### C2, The Big Capacitor
 
 C2 Is a 4.7uF Capacitor that smooths out large current ripples. It works with C1 to ensure that the board doesn't get damaged by spikes caused by devices connecting and disconnecting over USB.
 
@@ -171,7 +171,7 @@ When holding the HIDIOT with the USB connector in the top right, the grey strip 
 
 Once you're comfortable with the orientation, bend the legs and solder the part.
 
-#### Buttons (AKA Tactile Switches)
+### Buttons (AKA Tactile Switches)
 
 You might think of these as buttons, but in engineering and electronics, we call them tactile switches, or tact switches for short. Our tact switches are used for you to provide input to the HIDIOT. These components are optional, and can be put in now, later or not at all.
 
@@ -179,7 +179,7 @@ You might think of these as buttons, but in engineering and electronics, we call
 
 Like C2 and the diodes (and our ATTiny85) the tact switches care about orientation. Unlike C2, the diodes and the ATTiny, there's only two ways the tact switches will fit, and either way is fine. Make sure they're properly pushed through and you're ready to solder them in.
 
-#### Initial Testing
+### Initial Testing
 
 By now you should be a seasoned pro at soldering. If you're building another HIDIOT, you'll manage to do it a lot more quickly. There's one thing missing, which is the brains of the device, the ATTiny85. We'll come to that in a moment.
 
@@ -195,7 +195,7 @@ If the power LED doesn't light up, check the board's components with a multimete
 
 If the light comes on, great! We're ready to add the ATTiny85.
 
-#### The ATTiny85
+### The ATTiny85
 
 Make sure your HIDIOT is unplugged, and lets get the brains installed. Without the ATTiny85, our HIDIOT is little more than a dumb circuit.
 
@@ -213,7 +213,7 @@ Pop your chip in and looking across from the bottom of the board it should look 
 
 Note the row of resistors on the bottom, the USB connector on the top and that the chip's circle is on the bottom left. If yours matches, it's the right way round. If not, take it out and put it back in.
 
-#### Powering it all up
+### Powering it all up
 
 Plug your HIDIOT back into your hub or USB charger and you should see the power light come on. If you're using an official HIDIOT, LED1 should start blinking after a few seconds. If you're using a clone, the manufacturer may or may not have put anything on there, or flashed it at all.
 
