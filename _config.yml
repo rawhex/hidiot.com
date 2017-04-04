@@ -35,8 +35,8 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - README.md
-  - LICENCE
+  - Rakefile
+  - vendor/bundle
 
 collections:
   docs:
