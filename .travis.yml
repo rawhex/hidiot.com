@@ -1,0 +1,15 @@
+language: ruby
+rvm:
+- 2.3.3
+
+script: rake
+
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+
+sudo: false
+
+notifications:
+  slack:
+    secure: qe7AG/janm1OEdKE2sI64SOCKi+1wnZlr5vy8TOENhLEuNuQb6TTvBh2xyXwT3UGsO5e/Ti/C3TLtvIEES2IVJJJCSwaL9KEZMRjWQc0T90vRkGIOE/XU2syqaRnTUu7Y+mklJyzkhUnzWREoDnWAl+H5dmOlR7veuCvUNqLaZj20poNKzsR2Bm8wNAsUnlgzaAvr13ET3nP77NVyUzcvEi2jqsYSaj2CCi5sAZUUoCCEvHdj7NbYOqc6lupNudDGhwuz3q/CWamMi4ch+Lnn4510HcBEKManp1LdSo6hBi85Ae27Ge5MubiCk81D3XeF3svZtL7FcrGa3ihHyjfEImICZOq7AX5imOxPDf3CBpaePnc/j1/K2JWDBZnVKQqQ+RR+uK6iMobFvUJ9X8+1cBebq4S+C4AuFj0bhjnEK+hIlQUJO1YbB80X0SN4Evo4YElXpLLkydW/Mk7x672P64MIjUtqcOCUEoKPts4uQPLRgtLxDy7cvs4ddJ4PckW0tfyieqLutY9K08xAt4Sf7IeO3X5CcPlFr7ws39FxkYiocbOQotF+43iz3cr4NGOVl/cTUHzFotV9E/RzDTzJgJH805dGCCZ3W1z86O1KL/O5LP11zLcZ2u9BoZsR+YBOv5b6cUo94WNzg7PhaBFtPObIP2VDpw6uzh6fm2DwNg=
