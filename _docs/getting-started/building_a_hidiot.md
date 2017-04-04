@@ -6,6 +6,16 @@ order: 2
 
 Building a HIDIOT is easy. We designed it so that it's really hard to get wrong. Just take your time, and if you're stuck, ask our community on [Reddit](https://www.reddit.com/r/hidiot/).
 
+> This project involves soldering. Children should always be supervised when soldering, especially when they've never tried before. Parents should try this first, then give children the opportunity to try out soldering different parts under adult supervision. **Never** let children near hot soldering irons unsupervised.
+
+### What You Will Learn
+
+* How to build a HIDIOT
+* What each part does
+* Why each part is there
+* Soldering skills
+* How to test a PCB
+
 ### What You Will Need
 
 * Your HIDIOT parts kit
@@ -48,7 +58,7 @@ There's a good order to build the HIDIOT. If you're happy using helping hands, t
 
 When we talk about bottom, left, right on the board, we're assuming that you're holding the HIDIOT so that the USB connector is at the top right, like this:
 
-![Picture of HIDIOT board](/images/0_9a.jpg)
+![Picture of HIDIOT board](./0_9a.jpg)
 
 When we talk about the front of the board, we mean the side with the writing on it. The back is the side without any writing.
 
@@ -65,7 +75,7 @@ R3 limits the amount of current the power LED can draw, and R4 limits current fl
 
 Start by sliding the legs of the 68 ohm resistors (it's the 4 ones with the same colour band) through the front of the board. Once the resistors are touching the board, bend the legs back on the other side, then flip the board over so the back side is facing up, like this:
 
-![](/images/hidiot_resistor_pins.jpg)
+![](./hidiot_resistor_pins.jpg)
 
 Now you can solder the resistors to the board. Apply the heat first, then the solder. Feed the solder in as it melts until you have a nice full joint, then take the remaining solder away. There are 8 contacts, so you get 8 attempts. If you get it slightly wrong, or it looks ugly, don't worry.
 
@@ -87,7 +97,7 @@ The Zener diodes are orange, with a little black line on the bottom. Both Zeners
 
 Our 1N456A is more clearly labelled as D3 and is just to the right of where the Zeners go. The 1N456A is a black diode with a grey line at the bottom. Place the 1N456A through the D3 hole, so that the grey line is at the bottom. You should have something that looks like this:
 
-![](/images/0_9_diodes.jpg)
+![](./0_9_diodes.jpg)
 
 Before you do any soldering, make sure you're happy with the orientation of the diodes. If you're unsure, take a picture of what you have and ask the [community](https://www.reddit.com/r/hidiot/) *before* you start soldering.
 
@@ -111,11 +121,11 @@ Our ATTiny85 uses a DIP socket to allow you to swap out ATTiny85 chips. If you b
 
 The dip socket is the socket with 8 pins on one side and 8 holes in the other. There's a small notch on one-side.
 
-![](/images/dip_socket.png)
+![](./dip_socket.png)
 
 On the board, we can see 8 holes and a circle inside a rectangle. The circle is on the bottom left.
 
-![](/images/0_9a_dip.jpg)
+![](./0_9a_dip.jpg)
 
 The notch should be on the left hand side. If you get it wrong it's not going to affect things electrically, but you want it to be lined up correctly as the ATTiny needs to be put in the right way round.
 
@@ -133,7 +143,7 @@ There are two LEDs on the board. One is a power LED that is always on when power
 
 LEDs are Light Emitting Diodes. Because they're diodes, they care about their orientation. The long leg of an LED is the positive (or **anode**) leg. The short leg is the negative (or **cathode**) leg. On the board we've put - and + symbols to show you the orientation of the LEDs.
 
-![](/images/led_orientation.jpg)
+![](./led_orientation.jpg)
 
 As with any other diode, check your orientation before soldering, and if you're really sure, don't snip the legs.
 
@@ -147,13 +157,13 @@ C2 Is a different type of capacitor to C1. C2 Is an *electrolytic* capacitor. Th
 
 The negative side is normally indicated on a board by the line next to the circle, as shown below.
 
-![](/images/0_9a_c2.jpg)
+![](./0_9a_c2.jpg)
 
 > If the capacitor is soldered the wrong way round, it won't work. It could cause damage to your USB hub or even your computer. Make sure it's the right way round *before* your solder.
 
 Put the part through the holes with the correct orientation, but before you bend the pins back, bend the capacitor over to your left. When viewed from the top right, it should look something like the below:
 
-![](/images/cap_orientation.jpg)
+![](./cap_orientation.jpg)
 
 Note the PWR LED is on the right, and the 4 68 Ohm resistors on the bottom.
 
@@ -193,13 +203,13 @@ The ATTiny85 is the 8-pin chip and (hopefully) the last piece that hasn't been c
 
 Remember that circle in the rectangle on the board, where you put the DIP socket?
 
-![](/images/0_9a_dip.jpg)
+![](./0_9a_dip.jpg)
 
 There's also a circle on the ATTiny chip. That's why the dip switch has the notch on the one side. The notch is supposed to be on the same side as the circle on the chip. The circle on the chip is supposed be the same way round as the circle on the board.
 
 Pop your chip in and looking across from the bottom of the board it should look like this:
 
-![](/images/attiny.jpg)
+![](./attiny.jpg)
 
 Note the row of resistors on the bottom, the USB connector on the top and that the chip's circle is on the bottom left. If yours matches, it's the right way round. If not, take it out and put it back in.
 
