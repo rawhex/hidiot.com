@@ -12,7 +12,7 @@ Most tutorials are split into 3 parts, each part should take roughly 15 minutes,
 
 ### Getting Started
 
-1. [Electronics and you](/getting-started/electronics_and_you/)
+1. [Electricty and you](/getting-started/electricity_and_you/)
 2. [Building a HIDIOT](/getting-started/building_a_hidiot/)
 3. Programming your HIDIOT
 4. Building a better Blinky
