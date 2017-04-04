@@ -1,4 +1,4 @@
-require 'html-proofer'
+require 'htmlproofer'
 
 task :default do
   sh "bundle exec jekyll build"
