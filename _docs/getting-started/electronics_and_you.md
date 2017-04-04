@@ -1,5 +1,5 @@
 ---
-title: Electronics And You
+title: 1. Electricity and You
 category: Getting Started
 order: 1
 ---

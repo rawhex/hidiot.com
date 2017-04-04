@@ -12,8 +12,8 @@ Most tutorials are split into 3 parts, each should take roughly 15 minutes.
 
 ### Getting Started
 
-1. Electronics and you
-2. Building a HIDIOT
+1. [Electronics and you](/getting-started/electronics_and_you/
+2. [Building a HIDIOT](/getting-started/building_a_hidiot/)
 3. Programming your HIDIOT
 4. Building a better Blinky
 
@@ -31,6 +31,7 @@ Most tutorials are split into 3 parts, each should take roughly 15 minutes.
 
 ### Troubleshooting
 
-Common problems
-Caring for your HIDIOT
+1. Common problems
+2. Caring for your HIDIOT
+
 

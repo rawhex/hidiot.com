@@ -1,5 +1,5 @@
 ---
-title: Building A HIDIOT
+title: 2. Building a HIDIOT
 category: Getting Started
 order: 2
 ---
