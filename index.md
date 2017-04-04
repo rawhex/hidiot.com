@@ -8,7 +8,7 @@ On this site you'll find 10 tutorials designed to help you get up and running. O
 
 All of these tutorials are designed for two people to follow together, but some of these will require adult supervision.
 
-Most tutorials are split into 3 parts, each should take roughly 15 minutes.
+Most tutorials are split into 3 parts, each part should take roughly 15 minutes, and allow for a 5 minute break.
 
 ### Getting Started
 
