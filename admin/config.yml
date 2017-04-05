@@ -18,12 +18,12 @@ collections:
       - {label: "Category", name: "category", widget: "string"}
       - {label: "Order", name: "order", widget: "integer"}
       - {label: "Body (Rich Text Editor by default; highlight text and click <> to view Markdown)", name: "body", widget: "markdown"}
-  - name: "changelog"
-    label: "Changelog"
-    folder: "_posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Type (major or minor)", name: "type", widget: "string"}
-      - {label: "Body (Rich Text Editor by default; highlight text and click <> to view Markdown)", name: "body", widget: "markdown"}
+  # - name: "changelog"
+  #   label: "Changelog"
+  #   folder: "_posts"
+  #   create: true
+  #   slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  #   fields:
+  #     - {label: "Title", name: "title", widget: "string"}
+  #     - {label: "Type (major or minor)", name: "type", widget: "string"}
+  #     - {label: "Body (Rich Text Editor by default; highlight text and click <> to view Markdown)", name: "body", widget: "markdown"}
