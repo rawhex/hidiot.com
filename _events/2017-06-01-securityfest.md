@@ -7,7 +7,7 @@ location:   "Gothenburg, Sweden"
 time_start: "9:00"
 time_end:   "18:00"
 categories: securityfest gothenburg sweden
-image:      /assets/images/events/securityfest.png
+image:      /assets/images/events/securityfest-orig.png
 color:      violet
 map_url:    https://mapsengine.google.com/map/embed?mid=15uoGSLZLA2dZkBw43rJ31V5m3xk
 ---
