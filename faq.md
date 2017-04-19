@@ -2,7 +2,7 @@
 layout: faq
 title: Learn
 permalink: /faq/
-navigation_weight: 50
+navigation_weight: 60
 navigation_url: /faq/
 
 masthead_image:     /assets/images/masthead-08c-constructed.jpg
