@@ -107,7 +107,7 @@ Before you do any soldering, make sure you're happy with the orientation of the 
 
 If you get it wrong, you'll have to desolder the diodes and start again. For this reason, if you're not sure about the diodes at this point you can check them with a multimeter or leave the legs unsnipped until it's all working.
 
-### R5 and the C1 Transistor
+### R5 and the C1 Capacitor
 
 ![](/images/r5-c1.jpg)
 
