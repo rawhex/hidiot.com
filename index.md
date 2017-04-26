@@ -12,12 +12,14 @@ All of these tutorials are designed for two people to follow together, but some 
 
 Most tutorials are split into 3 parts, each part should take roughly 15 minutes, and allow for a 5 minute break.
 
+The code samples used in this tutorial are available on our [Github](https://github.com/rawhex/hidiot-tutorials). Details on how to install the code can be found in [Tutorial 3](/cutting_code/index/).
+
 ### Getting Started
 
-1. [Electricity and you](/getting-started/electricity_and_you/)
-2. [Building a HIDIOT](/getting-started/building_a_hidiot/)
-3. Programming your HIDIOT
-4. Building a better Blinky
+1. [About Electricity](/about_electricity/index/)
+2. [Building a HIDIOT](/building_a_hidiot/index/)
+3. [Cutting Code](/cutting_code/index/)
+4. [Developing HIDIOT](/developing_on_hidiot/index/)
 
 ### Getting To Grips With HIDIOT
 
