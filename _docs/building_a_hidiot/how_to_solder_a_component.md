@@ -62,7 +62,7 @@ There's a good order to build the HIDIOT. If you're happy using helping hands, t
 
 When we talk about bottom, left, and right on the board, we're assuming that you're holding the HIDIOT so that the USB connector is at the top right, like this:
 
-![Picture of HIDIOT board](/images/0_9a.jpg)
+![Unassembled board](/images/0_9a.jpg)
 
 When we talk about the front of the board, we mean the side with the writing on it. The back is the side without any writing.
 
@@ -72,7 +72,7 @@ We solder the smallest parts first, then the bigger parts at the end. It should 
 
 ### Soldering R1 - R4
 
-![](/images/r1-r4.jpg)
+![Four resistors](/images/r1-r4.jpg)
 
 The resistors are what we call passive components. They're unpolarized, which means they don't care which way round they go. On the bottom of the board there's space for four resistors, called R1 through R4. It's generally tidier to keep them oriented the same way, but you can put the resistors in any direction you like. After all, it's *your* HIDIOT.
 
@@ -81,7 +81,7 @@ R3 limits the amount of current the power LED can draw, and R4 limits current fl
 
 Start by sliding the legs of the 68 ohm resistors (it's the 4 ones with the same colour band) through the front of the board. Once the resistors are touching the board, bend the legs back on the other side, then flip the board over so the back side is facing up, like this:
 
-![](/images/hidiot_resistor_pins.jpg)
+![Resistor pins through board holes](/images/hidiot_resistor_pins.jpg)
 
 Now you can solder the resistors to the board. Apply the heat first, then the solder. Feed the solder in as it melts until you have a nice full joint, then take the remaining solder away. There are 8 contacts, so you get 8 attempts. If you get it slightly wrong, or it looks ugly, don't worry.
 
