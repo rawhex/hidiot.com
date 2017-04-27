@@ -1,6 +1,6 @@
 ---
 title: Blinking pretty patterns
-category: Developing HIDIOT
+category: Developing on HIDIOT
 order: 4
 ---
 
@@ -61,7 +61,7 @@ What happens when you use a random assignment for waitOn, and a random declarati
 
 Try tweaking the random range for ```waitOn``` and ```waitOff```. What combination do you think gives the best results?
 
-What else do you think we could use random numbers for? 
+What else do you think we could use random numbers for?
 
 Keep an eye out for electronic devices that pretend to be random, can you spot their patterns?
 

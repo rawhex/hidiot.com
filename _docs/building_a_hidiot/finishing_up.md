@@ -10,7 +10,7 @@ order: 4
 
 C2 Is a 4.7uF Capacitor that smooths out large current ripples. It works with C1 to ensure that the board doesn't get damaged by spikes caused by devices connecting and disconnecting over USB.
 
-C2 Is a different type of capacitor to C1. C2 Is an *electrolytic* capacitor. This means it has to be put the right way round on the board. A long grey strip runs down the one side of the capacitor to the cathode leg (negative), and the other leg is the cathode (positive).
+C2 is a different type of capacitor to C1. C2 Is an *electrolytic* capacitor. This means it has to be put the right way round on the board. A long grey strip runs down one side of the capacitor to the cathode leg (negative), and the other leg is the anode (positive).
 
 The negative side is normally indicated on a board by the line next to the circle, as shown below.
 

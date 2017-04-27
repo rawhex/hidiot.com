@@ -29,7 +29,7 @@ As you can see, hex files look like gibberish to us, but to a HIDIOT this makes 
 
 Next to the tick is an arrow pointing right, inside a circle. This is the upload button and it uploads the code to your HIDIOT. Whenever you click on this icon, the current code is recompiled, so you don't need to click on compile then upload, just clicking on upload is enough.
 
-After the arrow, the next three icons in squares create a new project, open and save a project. Over on the right of the window is the serial monitor. Because of the way USB works, we can't access serial over USB. If you have a USB-TTL converter then you can use software serial to talk to the HIDIOT.
+After the arrow, the next three icons in squares create a new project, open, and save a project. Over on the right of the window is the serial monitor. Because of the way USB works, we can't access serial over USB. If you have a USB-TTL converter then you can use software serial to talk to the HIDIOT.
 
 If you don't have a USB-TTL converter, don't worry. You're not missing out and there are plenty of other ways for you and your HIDIOT to talk to each other.
 
@@ -91,7 +91,7 @@ If:
 * There's no sign of a connection in Windows
 * There's no Windows error message
 * And you see a "Device search timed out" error message in the console area.
-	
+
 It's most likely that your USB hub isn't playing well with the HIDIOT and windows. Try the same hub in a different USB port (preferably a USB 2.0 port).
 
 If it still doesn't work, try a different USB hub. If that doesn't work, try a different computer.

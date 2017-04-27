@@ -1,10 +1,10 @@
 ---
 title: Understanding Sketches
-category: Developing HIDIOT
+category: Developing on HIDIOT
 order: 2
 ---
 
-Programs created in the Arduino IDE are called sketches. We're going to look at an example sketch, and go through some of the concepts behind it. We'll also look at some of the differences between programming an arduino and programming the HIDIOT.
+Programs created in the Arduino IDE are called sketches. We're going to look at an example sketch, and go through some of the concepts behind it. We'll also look at some of the differences between programming an Arduino and programming the HIDIOT.
 
 ## What You Will Learn
 
@@ -29,7 +29,7 @@ Although the first adding machines have been around for 5000 years, modern compu
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VMuQppYtTCo" frameborder="0" allowfullscreen></iframe>
 
-Now we know a bit about how computers came to be, and how compared to cars, moon rockets and even planes how young modern computers are, we can start looking at how Arduino sketches work.
+Now we know a bit about how computers came to be and, compared to cars, moon rockets and even planes, how young modern computers are, we can start looking at how Arduino sketches work.
 
 ### Why use an Arduino Sketch?
 
@@ -49,7 +49,7 @@ Arduino sketches are great for smaller things like the list above, but because t
 
 > Developers understand what they've been told, and do things the way they were told to do it. Hackers gain deep knowledge of something in order to make it do what they want.
 
-The common commands you see in an Arduino sketch are mostly helper commands wrapped around a professional language called C. Some people are scared by C, because they don't understand it. Because the HIDIOT is quite small, we're going to write a mix of Arduino sketches and pure C. It's enough to make the most of what we have, without making things too complicated for no good reason. Think of arduino sketches as training wheels on a bicycle, and C as a racing motorbike. We'll start out nice and slow with sketches, and work our way towards C as we understand more and more of it.
+The common commands you see in an Arduino sketch are mostly helper commands wrapped around a professional language called C. Some people are scared by C, because they don't understand it. Because the HIDIOT is quite small, we're going to write a mix of Arduino sketches and pure C. It's enough to make the most of what we have, without making things too complicated for no good reason. Think of Arduino sketches as training wheels on a bicycle, and C as a racing motorbike. We'll start out nice and slow with sketches, and work our way towards C as we understand more and more of it.
 
 C is a language that's used in everything from MacOS, Windows and Linux to the International Space Station. Code written in C runs on your computer, in cars, on planes and in hospital equipment. By learning a little C, you're already putting yourself way ahead of most developers.
 
@@ -131,4 +131,3 @@ Looking back at the program, we can now understand what it does. Lets break it d
 If that breakdown matches what you're thinking, then great! You fully understand what this program is doing. Unlike say, on your main computer, you know that when you tell the HIDIOT to supply 5 volts to pin 1, LED 1 will light up. This is the kind of detailed knowledge only a hardware hacker would have.
 
 There's a fair bit to take in, so you might want to have a break. When you're ready to carry on to the [next section](/developing_on_hidiot/how_the_hidiot_handles_values/) we'll take a look at another important programming building block: values.
-

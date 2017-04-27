@@ -35,7 +35,7 @@ If you're unfamiliar with soldering, you should also get:
 
 Soldering is a way of sticking two things together with a metal (called solder). It's a bit like hot glue, but hotter and with molten metal. Here's oneTesla with a walkthrough to show you how it works:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Qps9woUGkvI" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Qps9woUGkvI" frameborder="0" allowfullscreen></iframe><br />
 
 Soldering the components on your HIDIOT is easy, even if you've never soldered before. Just follow these 10 steps:
 
@@ -50,7 +50,7 @@ Soldering the components on your HIDIOT is easy, even if you've never soldered b
 9. Pull away the soldering iron.
 10. Snip the legs away with a pair of solder snippers. You can use scissors, just make sure you're wearing protective goggles and that the legs don't fly towards anyone, including yourself.
 
-Don't worry if this sounds a little too much to start with. [Gwendoline at iFixit](https://www.youtube.com/watch?v=UpVx4wGukRc) has a good video that goes through the basics. If you've never soldered before, it's worth looking at some videos on Youtube, and getting a piece of stripboard (which is just a board with a bunch of holes in it), and some components you don't mind losing just to try it out before you start on your HIDIOT.
+Don't worry if this sounds a little too much to start with. [Gwendoline at iFixit](https://www.youtube.com/watch?v=UpVx4wGukRc) has a good video that goes through the basics. If you've never soldered before, it's worth looking at some videos on YouTube, and getting a piece of stripboard (which is just a board with a bunch of holes in it), and some components you don't mind losing just to try it out before you start on your HIDIOT.
 
 Once you're happy with your soldering on a stripboard, you're ready to start. If you haven't soldered before and don't have a stripboard, you might want to try one of our workshops.
 
@@ -60,7 +60,7 @@ There's a good order to build the HIDIOT. If you're happy using helping hands, t
 
 > You can put the HIDIOT down after soldering an individual component and come back some other time. If you're struggling, switch off your soldering iron, get some fresh air and a nice drink and come back to it later. Try to complete a section at a time if you can, but if you can't, don't worry.
 
-When we talk about bottom, left, right on the board, we're assuming that you're holding the HIDIOT so that the USB connector is at the top right, like this:
+When we talk about bottom, left, and right on the board, we're assuming that you're holding the HIDIOT so that the USB connector is at the top right, like this:
 
 ![Picture of HIDIOT board](/images/0_9a.jpg)
 

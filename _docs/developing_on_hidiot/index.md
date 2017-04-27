@@ -1,6 +1,6 @@
 ---
 title: Making it your own
-category: Developing HIDIOT
+category: Developing on HIDIOT
 order: 1
 ---
 

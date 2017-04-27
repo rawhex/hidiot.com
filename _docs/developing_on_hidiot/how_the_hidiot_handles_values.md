@@ -1,6 +1,6 @@
 ---
 title: How the HIDIOT handles values
-category: Developing HIDIOT
+category: Developing on HIDIOT
 order: 3
 ---
 
@@ -31,7 +31,7 @@ Imagine our tea making program was being used to make tea for different people w
 	const int aidan = 2;
 	const int marizel = 1;
 	const int steve = none;
-	
+
 	makeTea(aidan);
 	makeTea(marizel);
 	makeTea(steve);
@@ -46,7 +46,7 @@ Our variable is still an integer, so that doesn't change. Instead, our code shou
 	int aidan = 2;
 	int marizel = 1;
 	int steve = none;
-	
+
 	makeTea(aidan);
 	makeTea(marizel);
 	makeTea(steve); // Always the one causing trouble!
@@ -112,17 +112,17 @@ Your code should now look like this:
 
 If your code matches the above, you're way ahead. Well done!
 
-Next we need to bring that delay under control. Lets declare a variable to sstore the amount of time we want to wait. Go to the end of the line you just added and press return, then add the following line: 
+Next we need to bring that delay under control. Lets declare a variable to sstore the amount of time we want to wait. Go to the end of the line you just added and press return, then add the following line:
 
 	int wait = 1000; // 1 Second
 
 Press return once again just to split your declarations from your code so it look tidy and your final code should look something like this:
 
 	// setup runs once on boot:
-	
+
 	const int ledPin = 1;
 	int wait = 1000; // 1 Second
-	
+
 	void setup() {                
 	  // Tell the ATTiny that we want to use pin 1 as an output
 	  pinMode(ledPin, OUTPUT); // Our LED is pin 1 and we're supplying electricity to it.
@@ -144,7 +144,7 @@ It might not seem like an awful lot compared to playing a game, but lets take a 
 
 A computer that you built yourself, from the components up, that you soldered yourself to a professional PCB, is now running code that you've written. You understand what the code does. You understand what the hardware does. You understand how the code and the hardware interact. You even know what voltage is being supplied to the LED.
 
-> Any sufficiently advanced technology is indistinguishable from magic. - Arthur C. Clarke
+> Any sufficiently advanced technology is indistinguishable from magic - *Arthur C. Clarke*
 
 You've just changed the whole of electronic hardware and software from being magic to being something you now understand. Never again will you look at remote control, a TV or even a games console and wonder how it works, knowing you'll never truly understand. If you genuinely wnat to understand how something electronic works down at the software and component level, you now have the tools to be able to do that.
 

@@ -1,6 +1,6 @@
 ---
 title: Blinking a Warning
-category: Developing HIDIOT
+category: Developing on HIDIOT
 order: 5
 ---
 
@@ -43,16 +43,16 @@ We can tell the HIDIOT to drop the value of waitOn each time round the loop by s
 Try adding this functionality to your own blink code. If you get it right, your code should roughly look something like this:
 
 	// setup runs once on boot:
-	
+
 	const int ledPin = 1;
 	int waitOn = 500; // 0.5 Seconds
 	int waitOff = 500; // 0.5 Seconds because the James Bond films always count down per second
-	
+
 	void setup() {                
 	  // Tell the ATTiny that we want to use pin 1 as an output
 	  pinMode(ledPin, OUTPUT); // Our LED is pin 1 and we're supplying electricity to it.
 	}
-	
+
 	// loop runs forever and ever:
 	void loop() {
 	  digitalWrite(ledPin, HIGH); // Make the LED turn on
@@ -61,7 +61,7 @@ Try adding this functionality to your own blink code. If you get it right, your 
 	    waitOn = waitOn - 10;
 		waitOff = waitOff - 5;
 	  }
-	
+
 	  if (waitOn > 0){
 	    digitalWrite(ledPin, LOW ); // Make the LED turn off
 	    delay(waitOff);               // wait

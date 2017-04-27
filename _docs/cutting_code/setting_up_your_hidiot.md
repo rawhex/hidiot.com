@@ -22,7 +22,7 @@ So far you've managed to build your own computer, completely from scratch at the
 * A USB Hub (preferably USB 2.0)
 * A computer running Microsoft Windows 10
 
-> Currently we only support Windows 10 as a development platform. While the HIDIOT will work on other Operating Systems, programming it on anything other than Windows comes with workarounds and limitations. Most frustratingly, the Digispark libraries don't support the Raspberry Pi. We're looking to expand our support over time, so if you have a platform you want us to support, [tell us so the community can vote on it](https://pay.reddit.com/r/hidiot/).
+> Currently we only support Windows 10 as a development platform. While the HIDIOT will work on other Operating Systems, programming it on anything other than Windows comes with workarounds and limitations. Most frustratingly, the Digispark libraries don't support the Raspberry Pi. We're looking to expand our support over time, so if you have a platform you want us to support, [tell us so the community can vote on it](https://reddit.com/r/hidiot/).
 
 ### How to connect your HIDIOT
 
@@ -34,7 +34,7 @@ When connecting your HIDIOT you want to be sure that you're not going to damage 
 
 We've created a video to walk you through setting up your Windows 10 system for the HIDIOT. Follow the video. Pause, then try each step as you go, and then carry on to the next step. It should take about 15-30 minutes depending on how comfortable you are with Windows 10.
 
-{% vimeo 214225374 %}
+{% vimeo 214225374 %}<br />
 
 For those who don't want to follow the video, here's some written instructions.
 
@@ -68,7 +68,7 @@ Now we need to add board definitions for the Digispark. The Digispark is an awes
 
 Start the Arduino IDE, and go to File -> Preferences. When the window appears click on the box to the right of the Additional Board Manager URLs line. Another Window will appear. Add the following URL to the box labeled Additional Board Manager URLs:
 
-	http://digistump.com/package_digistump_index.json
+	https://digistump.com/package_digistump_index.json
 
 Click on Ok, and then Ok on the previous Window to close it.
 

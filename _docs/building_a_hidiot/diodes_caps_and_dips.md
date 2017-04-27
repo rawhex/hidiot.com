@@ -76,7 +76,7 @@ LEDs are Light Emitting Diodes. Because they're diodes, they care about their or
 
 ![](/images/led_orientation.jpg)
 
-As with any other diode, check your orientation before soldering, and if you're really sure, don't snip the legs.
+As with any other diode, check your orientation before soldering, and if you're not really sure, don't snip the legs.
 
 If you make a mistake, the LEDs won't light up but the board will still work.
 
