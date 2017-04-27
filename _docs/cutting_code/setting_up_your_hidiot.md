@@ -28,7 +28,7 @@ So far you've managed to build your own computer, completely from scratch at the
 
 USB connections are based on a set of standards. The HIDIOT follows enough of those standards to work, but isn't strictly compliant with them all. Certain laptops, older machines and cheap hubs and computers don't like the HIDIOT at all. While we've taken every step to ensure compatibility, we can't guarantee that it will work on every computer.
 
-When connecting your HIDIOT you want to be sure that you're not going to damage your computer. Use a USB hub to connect your HIDIOT. That way if any electrical problems occur, they're more likely to fry the USB hub than your computer. 
+When connecting your HIDIOT you want to be sure that you're not going to damage your computer. Use a USB hub to connect your HIDIOT. That way if any electrical problems occur, they're more likely to fry the USB hub than your computer.
 
 > Make sure external power sources are switched off and disconnected before connecting the HIDIOT over USB. Plugging the HIDIOT in when it's already powered can seriously damage your HIDIOT, your USB hub, your computer or possibly even yourself. If you're using external power sources, always check they're disconnected before connecting to USB.
 
@@ -96,4 +96,4 @@ If you go to File -> Examples -> HIDIOT Tutorials -> Blink a new Blink sketch sh
 
 > The HIDIOT Library is updated fairly frequently. It's worth checking once a month to see if there's been any interesting updates. Of course we'll announce any big changes on our mailing list.
 
-Now's a great opportunity to take a break before we walk through the [Arduino IDE](/cutting_code/arduino_ide/).
+Now's a great opportunity to take a break before we walk through the [Arduino IDE](/cutting_code/using_the_arduino_ide/).
