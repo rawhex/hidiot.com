@@ -60,13 +60,13 @@ defaults:
       _comments:
         category: Group navigation links with this field
         order: Used to sort links in the navigation
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      _comments:
-        type: Marks the impact of this release
+  # -
+  #   scope:
+  #     path: ""
+  #     type: "posts"
+  #   values:
+  #     _comments:
+  #       type: Marks the impact of this release
 
 # -----------
 # CloudCannon
