@@ -1,6 +1,6 @@
 ---
 title: Blinking Codes
-category: Developing HIDIOT
+category: Developing on HIDIOT
 order: 6
 ---
 
@@ -36,30 +36,30 @@ In our code block above, we call an imaginary ```boop()``` function with the val
 Using the standard blink code as a starting point, can you modify the code to blink a random number of times? There's an example program in the HIDIOT Tutorial library under 4. Developing HIDIOT -> Mini Projects -> Blink_Codes.
 
 	// setup runs once on boot:
-	
+
 	const int ledPin = 1;
 	const int numberDelay = 2000; // Wait two seconds betwen random numbers
 	int waitOn = 500; // 0.5 Seconds
 	int waitOff = 500; // 0.5 Seconds
 	int blinks = 11; // Our initial number of blinks. If we see 11 blinks, we know something is wrong with our code
 	int i = 0; // A throwaway variable for our while loop
-	
+
 	void setup() {                
 	  // Tell the ATTiny that we want to use pin 1 as an output
 	  pinMode(ledPin, OUTPUT); // Our LED is pin 1 and we're supplying electricity to it.
 	}
-	
+
 	// loop runs forever and ever:
 	void loop() {
 	  blinks = random(1,11);
-	
+
 	  for (i = 0; i < blinks; i++){
 	    digitalWrite(ledPin, HIGH); // Make the LED turn on
 	    delay(waitOn);  // wait
 	    digitalWrite(ledPin, LOW); // Make the LED turn off
 	    delay(waitOff);
 	  }
-	  
+
 	  delay(numberDelay); // Wait between numbers
 	}
 
@@ -78,4 +78,3 @@ You've used an IDE to program a computer that you built by hand, yourself, from 
 Now you have a random number blinker, what else can you get it to tell you? How would you get it to include the number zero, and still let you know?
 
 So far we've had a look at a few things we can do with LEDs. But have you ever wondered [how an LED works](https://www.youtube.com/watch?v=uyse_I-zo4Q)?
-

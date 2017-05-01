@@ -1,5 +1,5 @@
 ---
-title: Initial Setup 
+title: Initial Setup
 type: major
 ---
 

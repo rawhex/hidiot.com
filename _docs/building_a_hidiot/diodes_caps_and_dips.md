@@ -4,7 +4,7 @@ category: Building a HIDIOT
 order: 3
 ---
 
-![](/images/0_9_diodes.jpg)
+![Two Zener and one 1N456A diode](/images/0_9_diodes.jpg)
 
 Ok, next up we need to put in our diodes. Diodes do several different things, but mostly make sure only a certain amount of current and voltage flows in a certain direction. We use two types of diodes - two Zener diodes and a 1N456A.
 
@@ -22,7 +22,7 @@ The Zener diodes are orange, with a little black line on the bottom. Both Zeners
 
 Our 1N456A is more clearly labelled as D3 and is just to the right of where the Zeners go. The 1N456A is a black diode with a grey line at the bottom. Place the 1N456A through the D3 hole, so that the grey line is at the bottom. You should have something that looks like this:
 
-![](/images/0_9_diodes.jpg)
+![Two Zener and one 1N456A diode](/images/0_9_diodes.jpg)
 
 Before you do any soldering, make sure you're happy with the orientation of the diodes. If you're unsure, take a picture of what you have and ask the [community](https://www.reddit.com/r/hidiot/) *before* you start soldering.
 
@@ -30,7 +30,7 @@ If you get it wrong, you'll have to desolder the diodes and start again. For thi
 
 ### R5 and the C1 Capacitor
 
-![](/images/r5-c1.jpg)
+![1.5k ohm resistor & 0.1uF capacitor](/images/r5-c1.jpg)
 
 Now we have our other resistors and the diodes in place, we're almost electrically complete!
 
@@ -44,17 +44,17 @@ Once they're through and the legs are bent back you should be ready to solder th
 
 ### The DIP Socket
 
-![](/images/dip_on_board.jpg)
+![DIP socket on board](/images/dip_on_board.jpg)
 
 Our ATTiny85 uses a DIP socket to allow you to swap out ATTiny85 chips. If you build your own projects this is really handy for updating software and prototyping new projects with your HIDIOT.
 
 The dip socket is the socket with 8 pins on one side and 8 holes in the other. There's a small notch on one-side.
 
-![](/images/dip_socket.png)
+![DIP socket close up](/images/dip_socket.png)
 
 On the board, we can see 8 holes and a circle inside a rectangle. The circle is on the bottom left.
 
-![](/images/0_9a_dip.jpg)
+![DIP socket location](/images/0_9a_dip.jpg)
 
 The notch should be on the left hand side. If you get it wrong it's not going to affect things electrically, but you want it to be lined up correctly as the ATTiny needs to be put in the right way round.
 
@@ -68,15 +68,15 @@ Soldering the corner pins first will ensure that the pins are fully through the 
 
 ### LEDs
 
-![](/images/led.png)
+![LED close up](/images/led.png)
 
 There are two LEDs on the board. One is a power LED that is always on when power is connected. The other is a programmable LED called LED1. Both of these are optional, but recommended for beginners.
 
 LEDs are Light Emitting Diodes. Because they're diodes, they care about their orientation. The long leg of an LED is the positive (or **anode**) leg. The short leg is the negative (or **cathode**) leg. On the board we've put - and + symbols to show you the orientation of the LEDs.
 
-![](/images/led_orientation.jpg)
+![Anode and cathode orientation](/images/led_orientation.jpg)
 
-As with any other diode, check your orientation before soldering, and if you're really sure, don't snip the legs.
+As with any other diode, check your orientation before soldering, and if you're not really sure, don't snip the legs.
 
 If you make a mistake, the LEDs won't light up but the board will still work.
 

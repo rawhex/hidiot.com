@@ -35,7 +35,7 @@ If you're unfamiliar with soldering, you should also get:
 
 Soldering is a way of sticking two things together with a metal (called solder). It's a bit like hot glue, but hotter and with molten metal. Here's oneTesla with a walkthrough to show you how it works:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Qps9woUGkvI" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Qps9woUGkvI" frameborder="0" allowfullscreen></iframe><br />
 
 Soldering the components on your HIDIOT is easy, even if you've never soldered before. Just follow these 10 steps:
 
@@ -50,7 +50,7 @@ Soldering the components on your HIDIOT is easy, even if you've never soldered b
 9. Pull away the soldering iron.
 10. Snip the legs away with a pair of solder snippers. You can use scissors, just make sure you're wearing protective goggles and that the legs don't fly towards anyone, including yourself.
 
-Don't worry if this sounds a little too much to start with. [Gwendoline at iFixit](https://www.youtube.com/watch?v=UpVx4wGukRc) has a good video that goes through the basics. If you've never soldered before, it's worth looking at some videos on Youtube, and getting a piece of stripboard (which is just a board with a bunch of holes in it), and some components you don't mind losing just to try it out before you start on your HIDIOT.
+Don't worry if this sounds a little too much to start with. [Gwendoline at iFixit](https://www.youtube.com/watch?v=UpVx4wGukRc) has a good video that goes through the basics. If you've never soldered before, it's worth looking at some videos on YouTube, and getting a piece of stripboard (which is just a board with a bunch of holes in it), and some components you don't mind losing just to try it out before you start on your HIDIOT.
 
 Once you're happy with your soldering on a stripboard, you're ready to start. If you haven't soldered before and don't have a stripboard, you might want to try one of our workshops.
 
@@ -60,9 +60,9 @@ There's a good order to build the HIDIOT. If you're happy using helping hands, t
 
 > You can put the HIDIOT down after soldering an individual component and come back some other time. If you're struggling, switch off your soldering iron, get some fresh air and a nice drink and come back to it later. Try to complete a section at a time if you can, but if you can't, don't worry.
 
-When we talk about bottom, left, right on the board, we're assuming that you're holding the HIDIOT so that the USB connector is at the top right, like this:
+When we talk about bottom, left, and right on the board, we're assuming that you're holding the HIDIOT so that the USB connector is at the top right, like this:
 
-![Picture of HIDIOT board](/images/0_9a.jpg)
+![Unassembled board](/images/0_9a.jpg)
 
 When we talk about the front of the board, we mean the side with the writing on it. The back is the side without any writing.
 
@@ -72,7 +72,7 @@ We solder the smallest parts first, then the bigger parts at the end. It should 
 
 ### Soldering R1 - R4
 
-![](/images/r1-r4.jpg)
+![Four resistors](/images/r1-r4.jpg)
 
 The resistors are what we call passive components. They're unpolarized, which means they don't care which way round they go. On the bottom of the board there's space for four resistors, called R1 through R4. It's generally tidier to keep them oriented the same way, but you can put the resistors in any direction you like. After all, it's *your* HIDIOT.
 
@@ -81,7 +81,7 @@ R3 limits the amount of current the power LED can draw, and R4 limits current fl
 
 Start by sliding the legs of the 68 ohm resistors (it's the 4 ones with the same colour band) through the front of the board. Once the resistors are touching the board, bend the legs back on the other side, then flip the board over so the back side is facing up, like this:
 
-![](/images/hidiot_resistor_pins.jpg)
+![Resistor pins through board holes](/images/hidiot_resistor_pins.jpg)
 
 Now you can solder the resistors to the board. Apply the heat first, then the solder. Feed the solder in as it melts until you have a nice full joint, then take the remaining solder away. There are 8 contacts, so you get 8 attempts. If you get it slightly wrong, or it looks ugly, don't worry.
 

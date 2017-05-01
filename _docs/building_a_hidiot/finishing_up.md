@@ -6,21 +6,21 @@ order: 4
 
 ### C2, The Big Capacitor
 
-![](/images/c2_on_board.jpg)
+![One 4.7uF capacitor](/images/c2_on_board.jpg)
 
 C2 Is a 4.7uF Capacitor that smooths out large current ripples. It works with C1 to ensure that the board doesn't get damaged by spikes caused by devices connecting and disconnecting over USB.
 
-C2 Is a different type of capacitor to C1. C2 Is an *electrolytic* capacitor. This means it has to be put the right way round on the board. A long grey strip runs down the one side of the capacitor to the cathode leg (negative), and the other leg is the cathode (positive).
+C2 is a different type of capacitor to C1. C2 Is an *electrolytic* capacitor. This means it has to be put the right way round on the board. A long grey strip runs down one side of the capacitor to the cathode leg (negative), and the other leg is the anode (positive).
 
 The negative side is normally indicated on a board by the line next to the circle, as shown below.
 
-![](/images/0_9a_c2.jpg)
+![Cathode orientation](/images/0_9a_c2.jpg)
 
 > If the capacitor is soldered the wrong way round, it won't work. It could cause damage to your USB hub or even your computer. Make sure it's the right way round *before* your solder.
 
 Put the part through the holes with the correct orientation, but before you bend the pins back, bend the capacitor over to your left. When viewed from the top right, it should look something like the below:
 
-![](/images/cap_orientation.jpg)
+![Capacitor close up](/images/cap_orientation.jpg)
 
 Note the PWR LED is on the right, and the 4 68 Ohm resistors on the bottom.
 
@@ -30,7 +30,7 @@ Once you're comfortable with the orientation, bend the legs and solder the part.
 
 ### Buttons (AKA Tactile Switches)
 
-![](/images/tact_switches.jpg)
+![Tacticle switches](/images/tact_switches.jpg)
 
 You might think of these as buttons, but in engineering and electronics, we call them tactile switches, or tact switches for short. Our tact switches are used for you to provide input to the HIDIOT. These components are optional, and can be put in now, later or not at all.
 
@@ -40,7 +40,7 @@ Like C2 and the diodes (and our ATTiny85) the tact switches care about orientati
 
 ### Initial Testing
 
-![](/images/no_chip.jpg)
+![Board without ATTiny85](/images/no_chip.jpg)
 
 By now you should be a seasoned pro at soldering. If you're building another HIDIOT, you'll manage to do it a lot more quickly. There's one thing missing, which is the brains of the device, the ATTiny85. We'll come to that in a moment.
 
@@ -58,7 +58,7 @@ If the light comes on, great! We're ready to add the ATTiny85.
 
 ### The ATTiny85
 
-![](/images/attiny_alone.png)
+![ATTiny85](/images/attiny_alone.png)
 
 Make sure your HIDIOT is unplugged, and lets get the brains installed. Without the ATTiny85, our HIDIOT is little more than a dumb circuit.
 
@@ -66,13 +66,13 @@ The ATTiny85 is the 8-pin chip and (hopefully) the last piece that hasn't been c
 
 Remember that circle in the rectangle on the board, where you put the DIP socket?
 
-![](/images/0_9a_dip.jpg)
+![DIP socket location](/images/0_9a_dip.jpg)
 
 There's also a circle on the ATTiny chip. That's why the dip switch has the notch on the one side. The notch is supposed to be on the same side as the circle on the chip. The circle on the chip is supposed be the same way round as the circle on the board.
 
 Pop your chip in and looking across from the bottom of the board it should look like this:
 
-![](/images/attiny.jpg)
+![ATTiny85 on board](/images/attiny.jpg)
 
 Note the row of resistors on the bottom, the USB connector on the top and that the chip's circle is on the bottom left. If yours matches, it's the right way round. If not, take it out and put it back in.
 
