@@ -1,5 +1,6 @@
-PATH
-  remote: ../hidiot-jekyll-theme
+GIT
+  remote: https://github.com/rawhex/hidiot-theme.git
+  revision: b2a5a6b4ffda0a97840854ad74e857d97f0bfe70
   specs:
     hidiot-theme (0.1.0)
       jekyll (~> 3.4)
