@@ -100,7 +100,7 @@ There's one other word that we need to keep an eye out for. We know that the Tit
 
 We now know the Morse patterns for call signs, common abbreviations and cribs. We can use this to spot patterns when the HIDIOT plays the Titanic's messages.
 
-It might be a good idea to write the morse dits and dahs for the words we've looked at on a piece of paper. We'll use the HIDIOT to play the messages nd copy them down. Having these abbreviations to hand will help speed up decoding them.
+It might be a good idea to write the morse dits and dahs for the words we've looked at on a piece of paper. We'll use the HIDIOT to play the messages and copy them down. Having these abbreviations to hand will help speed up decoding them.
 
 > If you haven't already, this would be a good opportunity to take a break. Don't worry, we'll still be ship shape and ready to go when you get back.
 
@@ -108,7 +108,7 @@ It might be a good idea to write the morse dits and dahs for the words we've loo
 
 Fire up your Arduino editor, and create a new sketch. If you're not keen on typing there's a copy of the finished code in the Arduino IDE under File -> Examples -> HIDIOT Tutorials -> 5. Exploring Morse Code -> Hello.
 
-> Typing up the code will help you understand what's happening. If you start to feel frustrated, you can always can always switch to the examples and come back to your code later on.
+> Typing up the code will help you understand what's happening. If you start to feel frustrated, you can always switch to the examples and come back to your code later on.
 
 Remember the rules for Morse code?
 
@@ -405,3 +405,15 @@ This video shows some of the transcripts played out on a spark gap Morse system.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/snkwsU98QlQ" frameborder="0" allowfullscreen></iframe>
 
 If you want to find out more about life as a radio operator on the Titanic, [here's](http://oceanliner.org/titanic_radio.htm) an excellent page with a newspaper cutting showing the kind of equipment they had to work with, and some interesting information about the Titanic's watery end.
+
+Finally, if you haven't soldered in your LED, you can also use a Piezo Buzzer on PB1 to make noise instead of using light. Replace the ```on()``` and ```off()``` functions with the following in your sketch:
+
+	void on(){        // Turn the LED on
+	  tone(LED,440);
+	}
+	
+	void off(){       // Turn the LED off
+	  noTone(LED);
+	}
+
+> Don't wire a speaker or headphone jack directly to the HIDIOT, as it could damage whatever's connected to it. Piezo buzzers will work if you replace the ```digitalWrite()``` with the ```tone()``` function.
