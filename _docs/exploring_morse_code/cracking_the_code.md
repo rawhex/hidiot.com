@@ -1,5 +1,5 @@
 ---
-title: Understanding Morse code 
+title: Cracking the code 
 category: Exploring Morse code
 order: 2
 ---
@@ -183,7 +183,7 @@ A better translation of the original Colombian is:
 
 ### What To Do Next
 
-Now would be a great time to take a break from decoding secret government messages. In the next part of this project, we're going to use the HIDIOT to send messages over Morse code, and decode some of the last messages sent on the voyage of the RMS Titanic.
+Now would be a great time to take a break from decoding secret government messages. In the [next part of this project](/exploring_morse_code/a_watery_grave/), we're going to use the HIDIOT to send messages over Morse code, and decode some of the last messages sent on the voyage of the RMS Titanic.
 
 In the meantime, try listening to some of these songs and see if you can spot the Morse code messages. Can you decode any of them?
 

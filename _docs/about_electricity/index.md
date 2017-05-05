@@ -1,5 +1,5 @@
 ---
-title: Electricity and You
+title: Electricity and you
 category: About Electricity
 order: 1
 ---

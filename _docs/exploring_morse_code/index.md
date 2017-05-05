@@ -1,21 +1,35 @@
 ---
-title: Welcome to the projects!
-category: Exploring Morse code
+title: Introduction
+category: Exploring Morse code 
 order: 1
 ---
 
-This is the first of the main HIDIOT projects that we're including as part of our tutorial series. Now that you've built and programmed your HIDIOT, we're going to teach you how to do things with it.
+Welcome to the first major project tutorial. In this tutorial we're going to learn about Morse code. Morse code is a way of sending messages using a single signal. It was invented in the 19th Century and is still in use today by amateur radio enthusiasts all over the world.
 
-The format of these projects is less formal than the tutorials, focusing more on doing cool things with rather than to the HIDIOT.
+In this project tutorial you will learn:
 
-None of these projects require extra hardware. Having said that there are tons of things you can do with extra hardware, which you should definitely explore once you've finished these projects.
+* Morse code basics
+* How to 'copy' Morse code
+* How to use a Morse code tree to convert between Morse and the Latin alphabet
+* Control structures 
+* How to use the different types of memory available in the HIDIOT
 
-Ultimately it's your HIDIOT and nobody can tell you what you can and can't do with it, although we would ask that you stay safe at all times doing so.
+Lets look at the projects in this tutorial.
 
-In our first project we're going to learn Morse code. We'll decode secret government messages embedded in pop music, then we're going to follow the actual last messages from the deadly maiden voyage of the RMS Titanic. Along the way we'll write some code so the HIDIOT can talk to us using Morse code, and we'll learn a bit about arrays, memory storage, strings and structures.
+#### Understanding Morse Code
 
-This project is split into 3 parts:
+In this project, we learn how to copy Morse code signals, and how to translate them into text. We learn how to use a Morse code tree to convert between text and Morse code. We then look for, decode and translate secret government messages hidden in pop music.
 
-* [Understanding Morse code](/exploring_morse_code/understanding_morse_code/) *(20-35 minutes including video)*
-* [A watery grave: The last messages from the RMS Titanic](/exploring_morse_code/a_watery_grave/) *(15-20 minutes plus optional activities)*
-* [Making the HIDIOT send any Morse code message](/exploring_morse_code/morse_messenger_upgrades/) *(15 minutes)*
+The [Understanding Morse Code](/exploring_morse_code/cracking_the_code/) project is about 30-45 minutes long including breaks and videos.
+
+#### A watery grave
+
+This project is about improving our Morse code skills and introducing some programming concepts. The RMS Titanic sunk in the Atlantic in 1912 after hitting an iceberg. The ship had the most advanced Morse code radio technology of the day. We decode real messages from the night the ship sank to find out what happened and whether or not the ship could've avoided the disaster that claimed 1500 lives.
+
+[A watery grave](/exploring_morse_code/a_watery_grave/) should take around 60 minutes, possibly much longer including breaks and videos. We've added suggested break points throughout this project.
+
+#### Build a Morse code messenger
+
+Now we know how Morse code works, we should use it! We'll use code from the Titanic project to make a Morse code messenger, then separate it from our main code so we can reuse it in other projects. We'll also look at the different types of memory available on the HIDIOT and how to use them to best effect.
+
+Build a Morse code messenger should take no more than 30-45 minutes including breaks.

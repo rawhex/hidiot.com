@@ -4,7 +4,7 @@ category: About Electricity
 order: 3
 ---
 
-#### Electrons
+### Electrons
 All of the things that we touch and experience are made of something we call *matter*. Matter is made of tiny particles that are so small we can't even see them. We call these *atoms*. Atoms themselves are made up of even smaller particles, one of which is called an *electron*. Electrons are negatively charged particles that orbit around atoms, like planets orbiting the sun.
 
 When we apply energy to atoms, they start to get quite excited. When some atoms get excited, the electrons start to jump from one atom to the next. These types of atoms are called *conductors*, because they conduct electrical current. These atoms are normally found in metals. 
@@ -17,7 +17,7 @@ Lets take a look at our circuit again. Pop the paper in between one of the LED l
 
 Now pull out the paper. The light comes on *because the electrons are moving* through the circuit. When the circuit is fully connected, we call this a *closed* circuit. When the circuit is disconnected or something blocks part of the circuit from being connected, we call this an *open* circuit.
 
-#### Voltage
+### Voltage
 Voltage is the force the pushes the electrons along. Imagine you're at a birthday party, playing pass the parcel. Everyone stands in a line passing the parcels along to the music. The parcels are the electrons. As the music goes faster, the parcels are passed more quickly. When the music stops, the parcels stop moving. At the party, in electrical terms, the voltage is the music. The people in the line are the conductive atoms.
 
 Voltage is measured in volts. Our CR2032 battery supplies 3 volts, which is enough to make the LED come on. The HIDIOT uses a mixture of 3.6 and 5 volts in different parts of the circuit.
@@ -46,7 +46,7 @@ At 5 volts, it's pretty upbeat party music. At 9 volts the atoms are getting a r
 
 Sometimes being slow and sleepy is perfectly fine. Building things that do exactly what they're meant to do, in exactly the way they're meant to do it is called *engineering*. We built a circuit to make the light come on, and it works! You're now officially a junior engineer!
 
-#### Resistance
+### Resistance
 
 If voltage pushes electrons along, *resistance* does the opposite. It restricts the flow of electrons, reducing the current in the process. Imagine a hose pipe being used to water a gardern. If we pinch the hose pipe, there's less space for the water to flow through. Turning the tap up to push more water out is the same as increasing the voltage, and more water flows through even though you're still squeezing the hosepipe the same way.
 
@@ -54,13 +54,13 @@ Electrical resistance works the same way as water resistance. We measure resista
 
 The most commonly used electrical component we use to manage resistance is called a *resistor*. You'll find some in your HIDIOT kit. They're the bits that have the multicoloured stripes and a gold band at one end.
 
-#### Current
+### Current
 
 We already know a little bit about current. We know it's much like the flow of a river but used when talking about electricity. We know that the electrical current flows from the positive side (the anode) to the negative side (cathode) of a circuit. A strong current means there are a lot of electrons flowing through the circuit. When you increase the voltage, you increase the current.
 
 Weirdly, the electrons themselves flow in the opposite direction from negative to positive. This is because of some fairly complicated physics. All we need to know is that when we talk about electric current, we talk about it flowing from positive to negative.
 
-#### Putting it all together
+### Putting it all together
 
 Now we know about electrons, voltage, resistance and current we can understand what happens when we pull the paper away from the circuit. Set up your circuit again so you can play along.
 

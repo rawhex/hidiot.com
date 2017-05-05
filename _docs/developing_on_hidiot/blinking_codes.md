@@ -1,5 +1,5 @@
 ---
-title: Blinking Codes
+title: Blinking codes
 category: Developing on HIDIOT
 order: 6
 ---

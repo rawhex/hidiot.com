@@ -1,5 +1,5 @@
 ---
-title: Finishing Up
+title: Finishing up
 category: Building a HIDIOT
 order: 4
 ---

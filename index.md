@@ -23,7 +23,7 @@ The code samples used in this tutorial are available on our [Github](https://git
 
 ### Getting To Grips With HIDIOT
 
-5. Learn Morse Code
+5. [Exploring Morse Code](/exploring_morse_code/index/)
 6. Make a Programmer Passport
 7. Getting tactile with buttons
 

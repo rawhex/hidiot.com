@@ -1,5 +1,5 @@
 ---
-title: Understanding Sketches
+title: Understanding sketches
 category: Developing on HIDIOT
 order: 2
 ---

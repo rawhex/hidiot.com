@@ -1,5 +1,5 @@
 ---
-title: Blinking a Warning
+title: Blinking a warning
 category: Developing on HIDIOT
 order: 5
 ---
