@@ -1,5 +1,5 @@
 ---
-title: A watery grave 
+title: A watery grave
 category: Exploring Morse code
 order: 3
 ---
@@ -120,7 +120,7 @@ Remember the rules for Morse code?
 
 This means that our timing should be based on unit length. we could declare a constant to use as a timing reference.
 
-Instead of a constant, we could also use a *macro*. Macros are fragments of code or data that are given names when *defined*. Whenever the name is used in code, it's replaced by it's value. This happens when we compile the code. Variables and constants are checked while the code is running on the HIDIOT. 
+Instead of a constant, we could also use a *macro*. Macros are fragments of code or data that are given names when *defined*. Whenever the name is used in code, it's replaced by it's value. This happens when we compile the code. Variables and constants are checked while the code is running on the HIDIOT.
 
 Macros look like constants to us, but the HIDIOT only sees the values. If we try the following:
 
@@ -212,14 +212,14 @@ All the main Morse action happens in our loop. Now we've written a bunch of help
 	  dit();
 	  nextSymbol();
 	  dit();
-	
+
 	  nextLetter();
-	
+
 	  // E
 	  dit();
-	
+
 	  nextLetter();
-	
+
 	  // L
 	  dit();
 	  nextSymbol();
@@ -228,9 +228,9 @@ All the main Morse action happens in our loop. Now we've written a bunch of help
 	  dit();
 	  nextSymbol();
 	  dit();
-	
+
 	  nextLetter();
-	
+
 	  // L
 	  dit();
 	  nextSymbol();
@@ -239,16 +239,16 @@ All the main Morse action happens in our loop. Now we've written a bunch of help
 	  dit();
 	  nextSymbol();
 	  dit();
-	
+
 	  nextLetter();
-	
+
 	  // O
 	  dah();
 	  nextSymbol();
 	  dah();
 	  nextSymbol();
 	  dah();
-	
+
 	  nextWord();
 	}
 
@@ -264,7 +264,7 @@ Did you copy the blinks correctly? Did you get H-E-L-L-O? If the timing wasn't t
 
 So far we've got a basic morse code blinker, and while it needs some work, we've learned a lot about the Titanic.
 
-Now would be a great time to stop for a break. When you come back, we'll look at how we can make this more practical. We'll also look for interesting messages. 
+Now would be a great time to stop for a break. When you come back, we'll look at how we can make this more practical. We'll also look for interesting messages.
 
 James Cameron took a submarine to explore the underwater remains of the Titanic in 1995. If you want something to watch during a break, try this video of his journey.
 
@@ -318,7 +318,7 @@ Our ```setup()``` function remains unchanged, but our ```loop()``` function will
 
 Lets take a look at this in more detail. We use a ```for``` loop in exactly the same way as explained in our [blinking codes](/developing_on_hidiot/blinking_codes/) project earlier. Inside the loop we call a ```send()``` function with an odd argument. Finally outside of the loop we wait 21 units, or 3 spaces.
 
-Looking at that loop, we see a reference to *message[i]*. If you've ever programmed in languages like Python or Java you'll probably recognise it. The part that reads ```message[i]``` is a way of accessing the *ith* character in a string, starting from zero.
+Looking at that loop, we see a reference to *message[i]*. If you've ever programmed in languages like Python or Java you'll probably recognise it. The part that reads ```message[i]``` is a way of accessing the *nth* character in a string, starting from zero.
 
 Suppose we declare a string, *foo*:
 
@@ -411,7 +411,7 @@ Finally, if you haven't soldered in your LED, you can also use a Piezo Buzzer on
 	void on(){        // Turn the LED on
 	  tone(LED,440);
 	}
-	
+
 	void off(){       // Turn the LED off
 	  noTone(LED);
 	}
