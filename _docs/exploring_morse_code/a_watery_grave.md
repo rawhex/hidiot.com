@@ -1,7 +1,7 @@
 ---
 title: A watery grave 
 category: Exploring Morse code
-order: 2
+order: 3
 ---
 
 In 1912 the Titanic, then the largest cruise liner in the world left Southampton. It's owners, crew and the press all said the ship was "unsinkable". 5 days later the ship hit an iceberg, split in two and sank to the bottom of the Atlantic. Over 1500 died when the ship sank.
