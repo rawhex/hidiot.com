@@ -1,5 +1,5 @@
 ---
-title: Build a Morse Code Messenger
+title: Build a Morse Code messenger
 category: Exploring Morse code
 order: 4
 ---
