@@ -10,6 +10,8 @@ In 1912 the Titanic, then the largest cruise liner in the world left Southampton
 
 In this project we'll decode the ship's Morse code transmissions to see if it could've been saved.
 
+> This tutorial contains code for the HIDIOT that blinks an LED. If you're affected by visual impairments making it hard to see the LED we recommend using the Piezo buzzer code modifications at the bottom of this tutorial. If you're affected by both hearing and visual impairments, you can learn Morse code by touching the piezo buzzer.
+
 ### Morse code and The Titanic
 
 Designed to be the world's biggest cruise liner, the Titanic was a floating 5 star hotel. It had a ballroom and even had Turkish baths. The ship had two hulls to protect against collision. It had some of the worlds most advanced technologies on board. The Titanic was promoted in the press as being "practically unsinkable".

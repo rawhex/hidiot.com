@@ -6,6 +6,14 @@ order: 1
 
 Welcome to the first major project tutorial. In this tutorial we're going to learn about Morse code. Morse code is a way of sending messages using a single signal. It was invented in the 19th Century and is still in use today by amateur radio enthusiasts all over the world.
 
+Here's Tara at 5 years old using Morse code to communicate over Ham Radio:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8Wg-723nOLc" frameborder="0" allowfullscreen></iframe>
+
+We’re going to learn Morse code for a different reason to Tara. The  ATTiny85 has 8 pins that you can use with other components. Some of these pins are already used for things like USB. Sometimes  you need information from the HIDIOT but don't have many free pins. 
+
+Morse code can work with a  light, a buzzer or anything that can be used to send a signal. If you  need the HIDIOT to tell you something complex, it’s the most efficient way for it to tell you.
+
 In this project tutorial you will learn:
 
 * Morse code basics
@@ -13,6 +21,7 @@ In this project tutorial you will learn:
 * How to use a Morse code tree to convert between Morse and the Latin alphabet
 * Control structures 
 * How to use the different types of memory available in the HIDIOT
+
 
 Lets look at the projects in this tutorial.
 

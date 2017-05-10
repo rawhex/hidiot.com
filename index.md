@@ -4,7 +4,7 @@ title: Welcome to the HIDIOT documentation!
 
 > Please note: This site is a work in progress. Tutorials are being added weekly. If you have a prototype, please check back for updates.
 
-This is the documentation for the [HIDIOT](https://hidiot.com).
+This is the documentation for the [HIDIOT](https://hidiot.com). If you'd like to use this material elsewhere, please [read our licensing](/using_this_documentation/index/) information first.
 
 On this site you'll find 10 tutorials designed to help you get up and running. Our tutorials are projects that cover different aspects of the HIDIOT, from hardware and electricity to software.
 
