@@ -11,8 +11,8 @@ show_full_navigation: true
 logo: /siteicon.png
 description: Documentation for using the HIDIOT
 author:
-  name: Steve Lord
-  email: steve@rawhex.com
+  name: Raw Hex
+  email: hidiot@rawhex.com
   twitter: rawhex
 social:
   name: Raw Hex

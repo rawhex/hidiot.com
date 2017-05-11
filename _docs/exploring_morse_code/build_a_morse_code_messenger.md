@@ -3,7 +3,7 @@ title: Build a Morse Code messenger
 category: Exploring Morse code
 order: 4
 ---
- 
+
 We've learned a lot about Morse code in this project so far. So far, you've:
 
 * Decoded secret government messages in pop music
@@ -18,29 +18,29 @@ Now we'll see how we can use our Titanic code to let us send any message we want
 Lets start by taking a look at our last piece of code from the Titanic project, Example E in the HIDIOT library:
 
     #include <avr/pgmspace.h>
-    
+
     #define UNIT 250 // Lets make time units 250 milliseconds long
     #define LED 1    // Our LED is PB1
-    
-    /* This message was sent on 14th April at 02:15 from MGY 
+
+    /* This message was sent on 14th April at 02:15 from MGY
      * This was the final full message sent from the Titanic.
      * One "CQ" was sent after this, but stopped abruptly.
      */
-    
+
     const char *message = "... --- ... / ... --- ... / -.-. --.- -.. / -.-. --.- -.. / -- --. -.-- .-.-.- / .-- . / .- .-. . / ... .. -. -.- .. -. --. / ..-. .- ... - .-.-.- / .--. .- ... ... . -. --. . .-. ... / .- .-. . / -... . .. -. --. / .--. ..- - / .. -. - --- / -... --- .- - ... .-.-.- / -- --. -.-- .-.-.-";
-    
+
     int len = strlen(message);
     int i;
-    
-    
+
+
     void on(){        // Turn the LED on
       digitalWrite(LED, HIGH);
     }
-    
+
     void off(){       // Turn the LED off
       digitalWrite(LED, LOW);
     }
-    
+
     void send(char c){
       switch (c){
         case '-':
@@ -64,12 +64,12 @@ Lets start by taking a look at our last piece of code from the Titanic project, 
         break;
       }
     }
-    
-    void setup() {                
+
+    void setup() {
       // initialize the digital pin as an output.
       pinMode(LED, OUTPUT); // Tells the HIDIOT we want to use the pin to output a signal
     }
-    
+
     void loop() {
       // put your main code here, to run repeatedly:
       for (i = 0; i < len; i++){
@@ -191,7 +191,7 @@ That brings everything per character onto one line but still keeps our code clea
         default: break;
       }
       send(' ');
-    } 
+    }
 
 This is short, nice and clean. We can add [punctuation](https://morsecode.scphillips.com/morse2.html) and any international letter symbols we want with ease.
 
@@ -226,7 +226,7 @@ Upload your sketch and see if it works. If all goes well, your Morse copy should
 
 	.-- .... .- - / .... .- - .... / --. --- -.. / .-- .-. --- ..- --. .... -
 
-> If you're struggling with your code, there's a working listing under File -> Examples -> HIDIOT Tutorials -> 5. Morse Code -> Messenger -> MorsePlayer. 
+> If you're struggling with your code, there's a working listing under File -> Examples -> HIDIOT Tutorials -> 5. Morse Code -> Messenger -> MorsePlayer.
 
 We can send any text message we like over Morse code. We can blink it out over an LED, or a buzzer. In fact, with the right module we could even send Morse code over radio!
 
@@ -266,7 +266,7 @@ Let's try to decode PARIS:
 
 	P         A     R       I     S
 	L R R L   L R   L R L   L L   L L L
-	. - - .   . -   . - .   . .   . . .       
+	. - - .   . -   . - .   . .   . . .
 
 	P (8 units + 3 intersymbol units)
 	  (3 unit space between words)
@@ -351,7 +351,7 @@ We want to reuse our code in any project. We need to set some sane configuration
 	#ifndef PIN
 	  #define PIN PB1
 	#endif
-	
+
 	#ifndef WPM
 	  #define WPM 5
 	#endif
@@ -368,28 +368,29 @@ Next we want to move our ```on()``` and ```off()``` functions across from the ma
 
 > Code should only be defined in one place. When compiling, make sure that you haven't defined something twice to avoid errors.
 
-Because we want to reuse this code, lets add support for piezo buzzers. 
+Because we want to reuse this code, lets add support for piezo buzzers.
 
 As well as ```#ifndef``` we can also use ```#ifdef``` to see if something *has* been defined. If we check to see if BEEP has been defined somewhere, then we can use a piezo.
 
-	void on(){        // Turn the LED on
-  
-    #ifdef BEEP
-      tone(PIN,550); // If our pin is connected to a piezo we can use tone()
-    #endif
-    #ifndef BEEP
-      digitalWrite(PIN, HIGH);
-    #endif
-  }
-  
-  void off(){       // Turn the LED off
-    #ifdef BEEP
-     noTone(PIN); // turn off piezo
-    #endif
-    #ifndef BEEP
-      digitalWrite(PIN, LOW);
-    #endif
-  }
+```
+void on(){        // Turn the LED on
+  #ifdef BEEP
+    tone(PIN,550); // If our pin is connected to a piezo we can use tone()
+  #endif
+  #ifndef BEEP
+    digitalWrite(PIN, HIGH);
+  #endif
+}
+
+void off(){       // Turn the LED off
+  #ifdef BEEP
+   noTone(PIN); // turn off piezo
+  #endif
+  #ifndef BEEP
+    digitalWrite(PIN, LOW);
+  #endif
+}
+```
 
 If BEEP has been defined in the main code, then we'll use the ```tone()``` and ```noTone()``` functions. If it hasn't, then we'll use ```digitalWrite()``` to control an LED.
 
@@ -421,7 +422,7 @@ Now our morse.h file is complete, we can go to our main code.
 
 At the top of our code. the #include directive tells the compiler that we have another file in our project. Although the Arduino IDE knows we have two files in our project, the compiler (which is not part of the IDE) doesn't.
 
-#include "morse.h"
+```#include "morse.h"```
 
 We should also declare our message as a variable rather than as a constant. So far, we've used static strings for messages. It's likely we'll generate strings when we call our morse function in the future.
 
@@ -429,7 +430,7 @@ We should also declare our message as a variable rather than as a constant. So f
 
 In our ```setup()``` function we just need to set the ```pinMode()``` as per usual, but we'll use the ```PIN``` macro:
 
-	void setup() {                
+	void setup() {
 	  // initialize the digital pin as an output.
 	  pinMode(PIN, OUTPUT); // Tells the HIDIOT we want to use the pin to output a signal
 	}
@@ -441,20 +442,20 @@ And our loop function is incredibly simple:
 	  morse(message);
 	}
 
-We've put all of our Morse program code into a self-contained include file. We can copy that file into any project, use the ```#include``` directive and call the ```morse()``` function to beep or blink out our message on any pin. You'll probably never need to write functions to play Morse code again.
+We've put all of our Morse program code into a self-contained include file. We can copy that file into any project, use the ```#include``` directive, and call the ```morse()``` function to beep or blink out our message on any pin. You'll probably never need to write functions to play Morse code again.
 
 Lets have a recap of what we've done in this project:
 
-* We learned about pseudo code, and how it can help us develop better programs
+* We learned about pseudo code and how it can help us develop better programs
 * We wrote a program to blink out morse code
-* We made it use recognised timing standards 
+* We made it use recognised timing standards
 * We saved time using Arduino IDE to change code
 * We split the code out so we can reuse it anywhere
 * We even added support for piezo buzzers
 
-By now You should know enough Morse code to start recognising it. You've written programs in C, the same professional programming language used everywhere else. You've decoded hidden messages in pop songs. You've even found out from the radio chatter at the time what really happened on the Titanic.
+By now you should know enough Morse code to start recognising it. You've written programs in C, the same professional programming language used everywhere else. You've decoded hidden messages in pop songs. You've even found out from the radio chatter at the time what really happened on the Titanic.
 
-Even better still, you've even scratched the surface of what you can do with the HIDIOT.
+Better still, you've not even scratched the surface of what you can do with the HIDIOT.
 
 ### What to do next
 
