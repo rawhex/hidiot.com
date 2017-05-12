@@ -35,7 +35,7 @@ If you're unfamiliar with soldering, you should also get:
 
 Soldering is a way of sticking two things together with a metal (called solder). It's a bit like hot glue, but hotter and with molten metal. Here's oneTesla with a walkthrough to show you how it works:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Qps9woUGkvI" frameborder="0" allowfullscreen></iframe><br />
+{% youtube Qps9woUGkvI %}
 
 Soldering the components on your HIDIOT is easy, even if you've never soldered before. Just follow these 10 steps:
 

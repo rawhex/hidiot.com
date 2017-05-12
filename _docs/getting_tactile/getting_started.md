@@ -18,7 +18,7 @@ If you look at the picture above, you can see the circle with the plus and minus
 
 Even though our piece of paper doesn't have a button it's still considered a switch in electrical terms. Specifically, it's a *single pole, single throw switch*. The term pole means the number of circuits that our switch can manage. Throw means the number of circuits a switch can manage. Here's Collin Cunningham to walk you through some of the many different types of switch you might see.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/S2AHimvbovI" frameborder="0" allowfullscreen></iframe>
+{% youtube S2AHimvbovI %}
 
 Now you know about what switches are and how they work, look around your house to see what types of switches you can see. Can you see any rotary switches? What about momentary switches? Have a look around . The sheer number and types of switches you find may surprise you.
 
@@ -110,7 +110,7 @@ When a pin isn't connected, we call it a *floating pin*. That doesn't mean that 
 
 James over at AddOhms has a really great explanation of what's happening. He also shows us what we can do to fix it.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wxjerCHCEMg" frameborder="0" allowfullscreen></iframe>
+{% youtube wxjerCHCEMg %}
 
 ### Fixing our code
 Now we know that using a resistor to pull the pin up to 5 volts will cause the problem, how do we add that to a finished PCB? Don't pack your HIDIOT up to send it back just yet. We have an internal pull-up resistor on each of the ATTiny's pins. All we need to do is change our ```setup()``` and ```loop()``` code and it'll work fine. In ```setup()```, replace the ```INPUT``` in the ```pinMode()``` calls with ```INPUT_PULLUP```, like this:
@@ -186,10 +186,10 @@ In the next tutorial we'll learn about the importance of *debouncing* and use th
 
 Have you ever wondered why computers use true and false, and 1 and 0? The answer is because of Information Theory, invented by Claude Shannon.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Q8rVJZ-VDKQ" frameborder="0" allowfullscreen></iframe>
+{% youtube Q8rVJZ-VDKQ %}
 
 Adam Westbrook made a brilliant short film about Shannon's role in the leap from the analogue to the digital age. Shannon was initially concerned with communication, but in the process he laid the foundation for the logic used in computers today.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rJszZebxL3E" frameborder="0" allowfullscreen></iframe>
+{% youtube rJszZebxL3E %}
 
 If you want to understand how logic operators work under the hood, SnugglyHappyMathTime has a really great introduction to logic in maths. Don't worry if this goes over your head. We'll make sure we spend some time explaining operators as we encounter them.

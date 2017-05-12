@@ -27,7 +27,7 @@ You might not know this, but computers have been around for a very long time. In
 
 Although the first adding machines have been around for 5000 years, modern computers like the HIDIOT haven't been around for very long at all. In fact, here's Rambling Hambling with a 10 minute rundown on the history of computers.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VMuQppYtTCo" frameborder="0" allowfullscreen></iframe>
+{% youtube VMuQppYtTCo %}
 
 Now we know a bit about how computers came to be and, compared to cars, moon rockets and even planes, how young modern computers are, we can start looking at how Arduino sketches work.
 

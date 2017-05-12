@@ -93,7 +93,7 @@ Don't worry if it's going a little slow. When you first learned to read you had 
 
 You might think it'd be quicker just to send a message on a mobile phone. Paul Kenny and a friend from Indiana University tried to see which was quicker, Morse code or an SMS. Which do you think will be quicker?
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TKrxMhNxv3Q" frameborder="0" allowfullscreen></iframe>
+{% youtube TKrxMhNxv3Q %}
 
 Morse code is most commonly used in Amateur Radio, but you can use Morse code to send messages using a mirror, your hands or anything that you can use as a signal, even blinking. You can even use a HIDIOT!
 

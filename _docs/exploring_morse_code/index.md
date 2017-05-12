@@ -8,7 +8,7 @@ Welcome to the first major project tutorial. In this tutorial we're going to lea
 
 Here's Tara at 5 years old using Morse code to communicate over Ham Radio:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8Wg-723nOLc" frameborder="0" allowfullscreen></iframe>
+{% youtube 8Wg-723nOLc %}
 
 We’re going to learn Morse code for a different reason to Tara. The  ATTiny85 has 8 pins that you can use with other components. Some of these pins are already used for things like USB. Sometimes  you need information from the HIDIOT but don't have many free pins.
 

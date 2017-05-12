@@ -6,7 +6,7 @@ order: 3
 
 In 1912 the Titanic, then the largest cruise liner in the world left Southampton. It's owners, crew and the press all said the ship was "unsinkable". 5 days later the ship hit an iceberg, split in two and sank to the bottom of the Atlantic. Over 1500 died when the ship sank.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SVLt9UfO3Q0" frameborder="0" allowfullscreen></iframe>
+{% youtube SVLt9UfO3Q0 %}
 
 In this project we'll decode the ship's Morse code transmissions to see if it could've been saved.
 
@@ -20,7 +20,7 @@ On-board was a team of wireless telegraph operators. They used Morse code to sen
 
 In case you were wondering what a spark gap Morse code key might sound like, here's a video:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cTWdGjKg2_A" frameborder="0" allowfullscreen></iframe>
+{% youtube cTWdGjKg2_A %}
 
 Can you tell what the Morse code message is at 9 seconds in?
 
@@ -270,7 +270,7 @@ Now would be a great time to stop for a break. When you come back, we'll look at
 
 James Cameron took a submarine to explore the underwater remains of the Titanic in 1995. If you want something to watch during a break, try this video of his journey.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7_d4qOvKkUM" frameborder="0" allowfullscreen></iframe>
+{% youtube 7_d4qOvKkUM %}
 
 ### Making a better Morse messenger
 
@@ -404,7 +404,7 @@ Perhaps most importantly, you now know that if someone claims a ship is unsinkab
 
 This video shows some of the transcripts played out on a spark gap Morse system. This is about as close as we can get to what the crew of the nearby Carpathia would've heard just before the ship sank.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/snkwsU98QlQ" frameborder="0" allowfullscreen></iframe>
+{% youtube snkwsU98QlQ %}
 
 If you want to find out more about life as a radio operator on the Titanic, [here's](http://oceanliner.org/titanic_radio.htm) an excellent page with a newspaper cutting showing the kind of equipment they had to work with, and some interesting information about the Titanic's watery end.
 

@@ -240,7 +240,7 @@ Lets have a look at our 4 requirements:
 
 The next thing for us to do is to move away from the unit speed to words per minute. We'll make a new Arduino sketch for this.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-uPV6eKAHNo" frameborder="0" allowfullscreen></iframe>
+{% youtube -uPV6eKAHNo %}
 
 John Wilson used a Digispark to make a similar Morse code player of his own. Here's a video of his automatic Morse code keyer running off a battery. If you want to run yours off a battery, plug your HIDIOT into a USB Mobile phone charger.
 
@@ -322,7 +322,7 @@ We've done quite a bit in this project, lets take a look at what we've done:
 
 By now you should be pretty good at spotting Morse code when you hear or see it. You might even find Morse code in places you never noticed before. Here's Rob Scallon sending Morse code through the medium of heavy metal music:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qaHgdFH3jgs" frameborder="0" allowfullscreen></iframe>
+{% youtube qaHgdFH3jgs %}
 
 How much of the conversation could you copy?
 
@@ -461,7 +461,7 @@ Better still, you've not even scratched the surface of what you can do with the 
 
 Now you can blink any Morse message, try revisiting the [blinking code project](/developing_on_hidiot/blinking_codes/). Can you add your Morse include to the project and have it blink the random numbers in Morse code instead?
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KKhgrCDkm0s" frameborder="0" allowfullscreen></iframe>
+{% youtube KKhgrCDkm0s %}
 
 If you found the story of the Titanic interesting, you'll love the story of the Zimmerman Telegram. The Zimmerman Telegram was a secret telegram sent by the Germans during the First World War. The British intercepted and decrypted the message. The contents of it brought the United States into the war and changed it's course.
 

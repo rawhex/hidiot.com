@@ -8,7 +8,7 @@ As well as blinking randomly, or blinking warnings to scare siblings and other f
 
 Modern satellites use the equivalent of blinking on radio to send massive amounts of information down to earth. We can't keep up with the speed they transmit, but here's a collection of some of the noises that the very first satellites sent to tell people on earth what was happening in space. If you listen carefully you might be able to spot patterns in the noises. Those patterns are different pieces of information encoded in the beeps.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MjVorX1YVng" frameborder="0" allowfullscreen></iframe>
+{% youtube MjVorX1YVng %}
 
 There are more ways to turn LED blinks into meaningful information than could be written here. In our first full project we'll look at one of the earliest methods of blinking complex information, Morse Code. For now, lets try something more simple.
 
