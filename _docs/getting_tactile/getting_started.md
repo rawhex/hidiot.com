@@ -45,61 +45,60 @@ From this point on we'll assume you have your tact switches properly connected t
 Now we have our switches connected, lets get started using them! As always, there's pre-built code in the HIDIOT tutorials example library. Try to play along first if you can. We assume you have the standard LED connected to PB1. You can of course use a buzzer on PB1 instead by declaring BEEP.
 
 The first thing we need to do is add some simple declarations to tell our HIDIOT about our tact switch and LED pins. We'll also declare a couple of variables to track their state.
+```
+#define BUT1 PB0
+#define BUT2 PB2
+#define LED PB1
 
-	#define BUT1 PB0
-	#define BUT2 PB2
-	#define LED PB1
-
-	int but1State = 0;
-	int but2State = 0;
-
+int but1State = 0;
+int but2State = 0;
+```
 We'll add basic ```on()``` and ```off()``` functions so we can control either an LED or a buzzer.
+```
+void on(){        // Turn the LED on
 
-	void on(){        // Turn the LED on
+  #ifdef BEEP
+    tone(LED,550); // If our pin is connected to a piezo we can use tone()
+  #endif
+  #ifndef BEEP
+    digitalWrite(LED, HIGH);
+  #endif
+}
 
-	  #ifdef BEEP
-	    tone(LED,550); // If our pin is connected to a piezo we can use tone()
-	  #endif
-	  #ifndef BEEP
-	    digitalWrite(LED, HIGH);
-	  #endif
-	}
-
-	void off(){       // Turn the LED off
-	  #ifdef BEEP
-	   noTone(LED); // turn off piezo
-	  #endif
-	  #ifndef BEEP
-	    digitalWrite(LED, LOW);
-	  #endif
-	}
-
+void off(){       // Turn the LED off
+  #ifdef BEEP
+   noTone(LED); // turn off piezo
+  #endif
+  #ifndef BEEP
+    digitalWrite(LED, LOW);
+  #endif
+}
+```
 Our ```setup()``` function tells the HIDIOT whether we're looking at an input or an output. We want to control the LED, so that's an output. We want to sense what the buttons are doing, which means they're inputs.
-
-	void setup() {
-	  // put your setup code here, to run once:
-	  pinMode(LED, OUTPUT);
-	  pinMode(BUT1, INPUT);
-	  pinMode(BUT2, INPUT);
-	}
-
+```
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(LED, OUTPUT);
+  pinMode(BUT1, INPUT);
+  pinMode(BUT2, INPUT);
+}
+```
 > As a general rule, if you're going to tell something to do something, it's an output. If you're expecting it to tell you something, it's an input.
 
 Finally, our ```loop()``` function checks the state of either button. If either value is HIGH then we turn on the LED. If the value is LOW then the current isn't flowing and we'll turn the LED off.
+```
+void loop() {
+  // put your main code here, to run repeatedly:
+  but1State = digitalRead(BUT1);
+  but2State = digitalRead(BUT2);
 
-	void loop() {
-	  // put your main code here, to run repeatedly:
-	  but1State = digitalRead(BUT1);
-	  but2State = digitalRead(BUT2);
-
-	  if (but1State == HIGH || but2State == HIGH) {
-	    on();
-	  } else {
-	    off();
-	  }
-
-	}
-
+  if (but1State == HIGH || but2State == HIGH) {
+    on();
+  } else {
+    off();
+  }
+}
+```
 The ```||``` is a way of chaining together two conditions so they apply if either one is true. We'll look at it in depth later.
 
 By the way, this code is fundamentally flawed and won't work. It makes the same the mistake everybody makes the first time they use tact switches. Don't worry, upload the code and give it a go but don't be surprised if it doesn't work properly.
@@ -114,38 +113,38 @@ James over at AddOhms has a really great explanation of what's happening. He als
 
 ### Fixing our code
 Now we know that using a resistor to pull the pin up to 5 volts will cause the problem, how do we add that to a finished PCB? Don't pack your HIDIOT up to send it back just yet. We have an internal pull-up resistor on each of the ATTiny's pins. All we need to do is change our ```setup()``` and ```loop()``` code and it'll work fine. In ```setup()```, replace the ```INPUT``` in the ```pinMode()``` calls with ```INPUT_PULLUP```, like this:
-
-	void setup() {
-	  // put your setup code here, to run once:
-	  pinMode(LED, OUTPUT);
-	  pinMode(BUT1, INPUT_PULLUP);
-	  pinMode(BUT2, INPUT_PULLUP);
-	}
-
+```
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(LED, OUTPUT);
+  pinMode(BUT1, INPUT_PULLUP);
+  pinMode(BUT2, INPUT_PULLUP);
+}
+```
 Using INPUT_PULLUP pulls the pin up to 5 volts when the circuit is open. When the circuit is closed by the switch, it's pulled low to ground. The value we read will then drop from HIGH to LOW. This means we need to change our ```loop()``` function to check for ```LOW``` states instead of ```HIGH```, like this:
+```
+void loop() {
+  // put your main code here, to run repeatedly:
+  but1State = digitalRead(BUT1);
+  but2State = digitalRead(BUT2);
 
-	void loop() {
-	  // put your main code here, to run repeatedly:
-	  but1State = digitalRead(BUT1);
-	  but2State = digitalRead(BUT2);
-
-	  if (but1State == LOW || but2State == LOW) {
-	    on();
-	  } else {
-	    off();
-	  }
-	}
-
+  if (but1State == LOW || but2State == LOW) {
+    on();
+  } else {
+    off();
+  }
+}
+```
 Upload your modified code to the HIDIOT. You should find it a little more responsive.
 
 ### What's with the pipes?
 Look at the ```if``` control block inside ```loop()```.
 So far, when we've used ```if```, we've used it like this:
-
-	if (a > b) {
-	  doStuff();
-	}
-
+```
+if (a > b) {
+  doStuff();
+}
+```
 As well as ```a > b```, we can use different symbols to mean different things. These symbols are called *operators*. A few of these operators are explained below:
 
 |Character|Operator|Meaning|
@@ -162,13 +161,13 @@ These types of operators are called conditional operators, because they're used 
 The ```||``` symbol is a *logical operator*. Logical operators connect two or more statements together. We can use these in control structures to chain conditions together.
 
 The ```||``` symbol is the logical operator for *OR*. In our if statement this means:
-
-	if (but1State equals HIGH OR but2State equals HIGH) {
-	  on();
-	} else {
-	  off();
-	}
-
+```
+if (but1State equals HIGH OR but2State equals HIGH) {
+  on();
+} else {
+  off();
+}
+```
 The ```else``` clause simply means "If the above isn't true, do this instead".
 
 As with comparison operators, there are whole bunch of logical operators, like AND, OR, NOT and XOR. Rather than fill your head with them right now we'll look at operators a we use them. For now, these are the only two logical operators you need to be aware of:

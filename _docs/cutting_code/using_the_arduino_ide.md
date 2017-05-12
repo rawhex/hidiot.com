@@ -72,11 +72,11 @@ When you make your own projects, the first time you compile, upload or save your
 Ok, it's time to see if your HIDIOT works. Connect a USB hub to your computer, and keep the HIDIOT ready to connect to the hub. Click on the upload button (the arrow in the circle in the toolbar area) and you should see a message telling you to plug in the device now. You have 60 seconds to plug your HIDIOT in to upload the code.
 
 After saying "Device is found!" a bunch of orange text should scroll up the screen. If all works well at the bottom you should see the following text:
-
-	> Starting the user app ...
-	running: 100% complete
-	>> Micronucleus done. Thank you!
-
+```
+> Starting the user app ...
+running: 100% complete
+>> Micronucleus done. Thank you!
+```
 ![Uploading Blink](/images/uploading_blink.png)
 
 If you can see something like the above, well done! You've just uploaded your first program to a computer that you built, by hand, from scratch.

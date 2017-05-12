@@ -30,21 +30,21 @@ The length of a signal is defined by something called a *unit*. A unit is just t
 * If someone makes a mistake and wants to delete the last word, they send 8 dits (with 8 spaces between the dits).
 
 We can write morse code using dots (periods) for dits, and dashes (minus symbols) for dahs. For example, the letter 'S' can be represented as 3 dits, while the letter 'O' is 3 dahs.
-
-	S: ...
-	O: ---
-
+```
+S: ...
+O: ---
+```
 If we want to spell out a whole word in morse code, we can use the dots and dashes to represent them. Lets spell out "HIDIOT".
+```
+H: ...
+I: ..
+D: -..
+I: ..
+O: ---
+T: -
 
-	H: ...
-	I: ..
-	D: -..
-	I: ..
-	O: ---
-	T: -
-
-	HIDIOT: . . .   . .   - . .   . .   - - -   -
-
+HIDIOT: . . .   . .   - . .   . .   - - -   -
+```
 Because replacing letters with dits and dahs can be quite painful to type, Samuel Morse looked at the popularity of letters in the alphabet when designing his code, and made the most common letters the shortest. He also structured letters and numbers in the form of a tree, making it easier to visualise.
 
 ![Morse code tree](/images/morse-tree.svg)
@@ -54,41 +54,41 @@ Although it looks a little complicated, the tree is very easy to use. Lets spell
 The nice thing about the tree is that if you want to get into Morse code, you can learn the characters in the order of how high they are in the tree, and you should learn the most common letters first.
 
 To get the letter L, we have to go through the following letters:
-
-	E - A - R - L
-	LEFT - RIGHT - LEFT - LEFT
-	DIT - DAH - DIT - DIT
-	. - . .
-
+```
+E - A - R - L
+LEFT - RIGHT - LEFT - LEFT
+DIT - DAH - DIT - DIT
+. - . .
+```
 This means that the letter L is 4 symbols long, going left, right, left, left we get dit, dah, dah, dit or . - . .
 
 Try the other letters. No peeking until you've tried!
 
 Ok, well in case you need a little more help, lets try O.
-
-	T - M - O
-	RIGHT - RIGHT - RIGHT
-	DAH - DAH - DAH
-	- - -
-
+```
+T - M - O
+RIGHT - RIGHT - RIGHT
+DAH - DAH - DAH
+- - -
+```
 Did you get it right? Shall we try the letter V?
-
-	E - I - S - V
-	LEFT - LEFT - LEFT - RIGHT
-	DIT - DIT - DIT - DAH
-	. . . -
-
+```
+E - I - S - V
+LEFT - LEFT - LEFT - RIGHT
+DIT - DIT - DIT - DAH
+. . . -
+```
 Great! Phew, looks like not so many words use the letter V! Lets try E, the most commonly used vowel in the English language.
-
-	E
-	LEFT
-	DIT
-	.
-
+```
+E
+LEFT
+DIT
+.
+```
 That was much easier! Our whole word can be represented by dots and dashes like this:
-
-	. - . .   - - -   . . . -   .
-
+```
+. - . .   - - -   . . . -   .
+```
 Don't worry if it's going a little slow. When you first learned to read you had to go slow too. Amateur Radio users sometimes talk using Morse code at speeds of over 20 words per minute.
 
 You might think it'd be quicker just to send a message on a mobile phone. Paul Kenny and a friend from Indiana University tried to see which was quicker, Morse code or an SMS. Which do you think will be quicker?
@@ -114,73 +114,73 @@ They couldn't use something obvious over radio, as the rebels could take the rad
 Start by listening to the song. Partway through the chorus you should hear some dits and dahs around 1 minute and 30 seconds in. Using a pen and paper, just try to write the dits and dahs down. You might need to listen to it a few times. The message is repeated at 2 minutes 32 seconds and at 3 minutes 33 seconds.
 
 You might struggle a bit with the first couple of characters because of the beat timing but see how many you can find, and whether or not you can write them all out. Don't worry if you can't make out all of the symbols, here they are below.
-
-	. - - - -
-	- - - - .
-	. - . .
-	. .
-	- . . .
-	.
-	. - .
-	. -
-	- . .
-	- - -
-	. . .
-	. . .
-	. .
-	- - .
-	. . -
-	.
-	- .
-	. . -
-	. . .
-	-
-	.
-	- . .
-	.
-	. . .
-	. -
-	- .
-	. .
-	- -
-	- - -
-
+```
+. - - - -
+- - - - .
+. - . .
+. .
+- . . .
+.
+. - .
+. -
+- . .
+- - -
+. . .
+. . .
+. .
+- - .
+. . -
+.
+- .
+. . -
+. . .
+-
+.
+- . .
+.
+. . .
+. -
+- .
+. .
+- -
+- - -
+```
 Ok, this is a lot to take in, so lets try and split it up into sections. There are 29 characters representing words in Spanish. Lets split it up into 3 parts of 7 characters and one of 8. If you haven't played the song too many times, try working through this to the sounds of some catchy Colombian pop music.
 
 ![Morse tree](/images/morse-tree.svg)
 
 Taking the first 7 characters we can use the Morse tree to convert it into text. Using left for dit, right for dah, we get:
-
-	. - - - -   - - - - .   . - . .   . .   - . . .   .   . - .
-	L R R R R   R R R R L   L R L L   L L   R L L L   L   L R L
-	        1           9         L     I         B   E       R
-
+```
+. - - - -   - - - - .   . - . .   . .   - . . .   .   . - .
+L R R R R   R R R R L   L R L L   L L   R L L L   L   L R L
+        1           9         L     I         B   E       R
+```
 Cool! We have our first part of the message! Now to try the second set of 7 characters. This time, you can fill in the letters from the tree.
-
-	. -   - . .   - - -   . . .   . . .   . .   - - .
-	L R   R L L   R R R   L L L   L L L   L L  R R L
-	  _       _       _       _       _     _      _
-
+```
+. -   - . .   - - -   . . .   . . .   . .   - - .
+L R   R L L   R R R   L L L   L L L   L L  R R L
+  _       _       _       _       _     _      _
+```
 Did you get all the letters from the tree? If so, lets try the next set. This time, you can work out the left and right, and fill in the letters.
-
-	. . -   .   - .   . . -   . . .   -   .
-	_ _ _   _   _ _   _ _ _   _ _ _   _   _
-	    _   _     _       _       _       _
-
+```
+. . -   .   - .   . . -   . . .   -   .
+_ _ _   _   _ _   _ _ _   _ _ _   _   _
+    _   _     _       _       _       _
+```
 Ok, final set of 8 characters!
-
-	   - . .   .   . . .   . -   - .   . .   - -   - - -
-
+```
+- . .   .   . . .   . -   - .   . .   - -   - - -
+```
 If you speak Spanish, you should be able to tell what the message is. If you don't, it's still pretty hard to work out where words start and end, let alone what the message is. Thankfully we live in the 21st century, and can use Google translate. Copy and paste the words without spaces into [Google Translate](https://translate.google.com/). Set the source language to Spanish and the destination language to your own. There should be a message on the Google page that has a suggestion for spaces. Click on the link and the text should translate.
 
 If it's still a little clunky, try changing using proper capitalisation and playing with different combinations of full stops after words to see if you can improve the translation. The final message in English (according to Google translate) is:
-
-	19 Released. You follow. Cheer up.
-
+```
+19 Released. You follow. Cheer up.
+```
 A better translation of the original Colombian is:
-
-	19 PEOPLE RESCUED. YOU’RE NEXT. DON’T LOSE HOPE
-
+```
+19 PEOPLE RESCUED. YOU’RE NEXT. DON’T LOSE HOPE
+```
 ### What To Do Next
 
 Now would be a great time to take a break from decoding secret government messages. In the [next part of this project](/exploring_morse_code/a_watery_grave/), we're going to use the HIDIOT to send messages over Morse code, and decode some of the last messages sent on the voyage of the RMS Titanic.

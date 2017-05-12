@@ -49,11 +49,11 @@ We don't need to decrypt a message, but knowing morse code patterns will help sp
 Every ship with a registered radio had a callsign. The callsign for the RMS Titanic was MGY. This means that if in the spring of 1912 you heard MGY in Morse code, it was a message about, from or to the Titanic. Lets use the tree to work backwards and convert MGY into Morse code.
 
 ![Morse code tree](/images/Morse-tree.svg)
-
-	M     G       Y
-	R R   R R L   R L R R
-	- -   - - .   - . - -
-
+```
+M     G       Y
+R R   R R L   R L R R
+- -   - - .   - . - -
+```
 Excellent! Now we know that when we see this pattern in the messages, the message is either from, to or about the Titanic.
 
 Other ships communicating at the time had other callsigns:
@@ -75,31 +75,31 @@ Morse code operators start conversations by calling for attention using the text
 When an operator received signals they'd copy them to paper and translate them into text. This is why people still use the word *copy* used to ask or confirm they received a radio message.
 
 Because CQ stood for security, adding a D for danger turned this into a distress code. CQD was the standard international distress signal until the late 1900s. This changed because operators would use CQ with DE to say a message came from a specific callsign. Look at the following message:
-
-	C         Q             D       E       M     G       Y
-	R L R L   R R L R       R L L   L       R R   R R L   R L R R
-	- . - .   - - . -       - . .   .       - -   - - .   - . - -
-
+```
+C         Q             D       E       M     G       Y
+R L R L   R R L R       R L L   L       R R   R R L   R L R R
+- . - .   - - . -       - . .   .       - -   - - .   - . - -
+```
 This is a general call for attention from the Titanic. Now look at this message:
-
-	C         Q         D           M     G       Y
-	R L R L   R R L R   R L L       R R   R R L   R L R R
-	- . - .   - - . -   - . .       - -   - - .   - . - -
-
+```
+C         Q         D           M     G       Y
+R L R L   R R L R   R L L       R R   R R L   R L R R
+- . - .   - - . -   - . .       - -   - - .   - . - -
+```
 Wireless operators would type out Morse code at very high speed. If the sender or listener made a mistake, they would copy false distress signals. In some cases they'd even ignore real ones.
 
 Because of this, the international distress call code changed to SOS. People started using the term SOS to mean, "Save Our Souls". It doesn't mean anything. The real reason the code is SOS is because anyone can spot it, even with poor reception:
-
-	S       O       S
-	L L L   R R R   L L L
-	. . .   - - -   . . .
-
+```
+S       O       S
+L L L   R R R   L L L
+. . .   - - -   . . .
+```
 There's one other word that we need to keep an eye out for. We know that the Titanic hit an iceberg before sinking. If there were other ships in the area, they might've seen the iceberg too. Lets keep an eye out for messages about *ice*.
-
-	I     C        E
-	L L   R L R L  L
-	. .   - . - .  .
-
+```
+I     C        E
+L L   R L R L  L
+. .   - . - .  .
+```
 We now know the Morse patterns for call signs, common abbreviations and cribs. We can use this to spot patterns when the HIDIOT plays the Titanic's messages.
 
 It might be a good idea to write the morse dits and dahs for the words we've looked at on a piece of paper. We'll use the HIDIOT to play the messages and copy them down. Having these abbreviations to hand will help speed up decoding them.
@@ -125,25 +125,25 @@ This means that our timing should be based on unit length. we could declare a co
 Instead of a constant, we could also use a *macro*. Macros are fragments of code or data that are given names when *defined*. Whenever the name is used in code, it's replaced by it's value. This happens when we compile the code. Variables and constants are checked while the code is running on the HIDIOT.
 
 Macros look like constants to us, but the HIDIOT only sees the values. If we try the following:
-
-	#define UNIT 250 // Each unit is 250 milliseconds long
-
+```
+#define UNIT 250 // Each unit is 250 milliseconds long
+```
 When we use ```UNIT``` in code, we see the word UNIT. The compiler takes the Macro and changes instances of UNIT to 250.
 
 So when should we use a constant, and when should we use a macro? Constants and variables are specific data types like ```int``` and ```char```. Macros are replaced with their value during compilation, so they have no type. It's a subtle but important difference.
 
 As a rule of thumb for configuration, use a macro:
-
-	#define LED 1 // pin 1 is our LED. Change this if you use a different pin
-
+```
+#define LED 1 // pin 1 is our LED. Change this if you use a different pin
+```
 If it's going to form a core part of your code, you're usually better off using a constant:
 
 const float pi = 3.1459623
 
 As well as radio, Morse code is commonly used with lights and mirrors. We'll use the LED on PB1 to blink out our Morse code patterns. Because that's a configuration setting, we'll use a macro.
-
-	#define LED 1 // Our LED is PB1
-
+```
+#define LED 1 // Our LED is PB1
+```
 Next we need a way to turn the LED on and off. Our Blink code from the mini-projects used the ```digitalWrite()``` and ```delay()``` functions. We should be able to reuse that code to turn our LEDs on and off.
 
 We need to use the code slightly differently. Because we're dealing with time, we need to turn the LED on, wait a UNIT, then turn the LED off and wait a UNIT. We need to wait different amounts of UNITs for dahs, spaces and so on.
@@ -161,99 +161,99 @@ We can use functions for each type of delay. Lets list out what we need to do:
 * Wait between words (7 units)
 
 Lets start with a function to turn things on:
-
-	void on(){        // Turn the LED on
-	  digitalWrite(LED, HIGH);
-	}
-
+```
+void on(){        // Turn the LED on
+  digitalWrite(LED, HIGH);
+}
+```
 That was pretty easy. Our ```off()``` function should be the same, but with LOW instead of HIGH. You can type that in yourself. Our ```on()``` and ```off()``` functions separate the act of turning the LED on and off from the amount of time we wait. This means that if we need to change how we turn LEDs on and off then we only need to update our code in two places instead of 5.
 
 How about ```dit()``` and ```dah()``` functions?
-
-	void dit(){       // A dit (1 pulse of 1 time unit)
-	  on();
-	  delay(UNIT);
-	}
-
+```
+void dit(){       // A dit (1 pulse of 1 time unit)
+  on();
+  delay(UNIT);
+}
+```
 For ```dah()``` we could use 3 ```delay(UNIT)``` calls in a row, but that's a bit long. When we use a macro for UNIT, the UNIT inside the ```delay()``` call is replaced with the value of UNIT when the code is compiled. We know that a dah is 3 times the length of a unit, so we can use this:
-
-	void dah(){      // A dah (1 pulse of 3 time units in length)
-	  on();
-	  delay(UNIT*3);
-	}
-
+```
+void dah(){      // A dah (1 pulse of 3 time units in length)
+  on();
+  delay(UNIT*3);
+}
+```
 How cool is that? Next we need to create delay functions. We need functions for spaces between Morse characters, letters and words.
-
-	void nextSymbol(){ // The space between symbols
-	  off();
-	  delay(UNIT);
-	}
-
+```
+void nextSymbol(){ // The space between symbols
+  off();
+  delay(UNIT);
+}
+```
 The nextSymbol is the space between dots and dashes, a space of one unit. Create a ```nextLetter()``` function for the space between letters based on the above. Now create a ```nextWord()``` function for the space between words.
 
 We can use the same trick as we did with ```dah()``` and use multiples of UNIT to wait for the space between letters and words. Give it a try.
 
 Our ```setup()``` function should be the same as our earlier blinking code:
-
-	// setup starts once when you power on your HIDIOT:
-	void setup() {
-	  // initialize the digital pin as an output.
-	  pinMode(LED, OUTPUT); // Tells the HIDIOT we want to use the pin to output a signal
-	}
-
+```
+// setup starts once when you power on your HIDIOT:
+void setup() {
+  // initialize the digital pin as an output.
+  pinMode(LED, OUTPUT); // Tells the HIDIOT we want to use the pin to output a signal
+}
+```
 All the main Morse action happens in our loop. Now we've written a bunch of helper functions, lets test them out by typing in a friendly hello message.
+```
+// loop runs forever and ever:
+void loop() {
+  // Lets send the word "HELLO", or ".... . .-.. .-.. ---"
+  // H
+  dit();
+  nextSymbol();
+  dit();
+  nextSymbol();
+  dit();
+  nextSymbol();
+  dit();
 
-	// loop runs forever and ever:
-	void loop() {
-	  // Lets send the word "HELLO", or ".... . .-.. .-.. ---"
-	  // H
-	  dit();
-	  nextSymbol();
-	  dit();
-	  nextSymbol();
-	  dit();
-	  nextSymbol();
-	  dit();
+  nextLetter();
 
-	  nextLetter();
+  // E
+  dit();
 
-	  // E
-	  dit();
+  nextLetter();
 
-	  nextLetter();
+  // L
+  dit();
+  nextSymbol();
+  dah();
+  nextSymbol();
+  dit();
+  nextSymbol();
+  dit();
 
-	  // L
-	  dit();
-	  nextSymbol();
-	  dah();
-	  nextSymbol();
-	  dit();
-	  nextSymbol();
-	  dit();
+  nextLetter();
 
-	  nextLetter();
+  // L
+  dit();
+  nextSymbol();
+  dah();
+  nextSymbol();
+  dit();
+  nextSymbol();
+  dit();
 
-	  // L
-	  dit();
-	  nextSymbol();
-	  dah();
-	  nextSymbol();
-	  dit();
-	  nextSymbol();
-	  dit();
+  nextLetter();
 
-	  nextLetter();
+  // O
+  dah();
+  nextSymbol();
+  dah();
+  nextSymbol();
+  dah();
 
-	  // O
-	  dah();
-	  nextSymbol();
-	  dah();
-	  nextSymbol();
-	  dah();
-
-	  nextWord();
-	}
-
+  nextWord();
+}
+```
 Oh dear. That's quite a lot of writing to say hello. We'll need something better for whole messages. For now, compare your sketch to the one in the HIDIOT Tutorials examples.
 
 When you're confident it'll work, hit the upload button and plug in your HIDIOT. If all goes well, you should see the LED blinking away. Write out the dits and dahs on a piece of paper, and use the tree to turn the blinks back into text.
@@ -292,40 +292,40 @@ We can use these structures to make our code better. Using loops and conditional
 If we want to hold a bunch of text, we can use what's called a *string*. We call a bunch of text a string, but the official name for the data type we'll use is *char* (for character).
 
 We can store our message in a constant char like this:
-
-	const char *message = ".... . .-.. .-.. ---";
-
+```
+const char *message = ".... . .-.. .-.. ---";
+```
 The asterisk in front of the word message is a *pointer*. Because text can be long, we declare a pointer to the text rather than declaring the text itself. A pointer is like a shortcut on your desktop. It's easier for the HIDIOT to keep the string in one place and move a shortcut around than move chunks of text around.
 
 > Pointers might seem weird, and some people struggle with them. The easiest way to use them is to be consistent. When declaring a string, put an asterisk in front of the name.
 
 We'll then use the ```strlen()``` function to work out how long that message is, and store that value in a variable called len. We'll also declare a variable, i to use in a loop later on.
-
-	int len = strlen(message);
-	int i;
-
+```
+int len = strlen(message);
+int i;
+```
 We can keep our ```on()``` and ```off()``` functions as they are, but we can get rid of our ```dit()``` and ```dah()``` functions. We'll use a conditional control structure like ```if``` and do our dits and dahs inside it's code block.
 
 We'll handle timing inside a control structure. This means we can also get rid of ```nextSymbol()```, ```nextLetter()``` and ```nextWord()``` functions.
 
 Our ```setup()``` function remains unchanged, but our ```loop()``` function will be completely different.
-
-	void loop() {
-	  // put your main code here, to run repeatedly:
-	  for (i = 0; i < len; i++){
-	    send(message[i]);
-	  }
-	  delay(UNIT*21);
-	}
-
+```
+void loop() {
+  // put your main code here, to run repeatedly:
+  for (i = 0; i < len; i++){
+    send(message[i]);
+  }
+  delay(UNIT*21);
+}
+```
 Lets take a look at this in more detail. We use a ```for``` loop in exactly the same way as explained in our [blinking codes](/developing_on_hidiot/blinking_codes/) project earlier. Inside the loop we call a ```send()``` function with an odd argument. Finally outside of the loop we wait 21 units, or 3 spaces.
 
 Looking at that loop, we see a reference to *message[i]*. If you've ever programmed in languages like Python or Java you'll probably recognise it. The part that reads ```message[i]``` is a way of accessing the *nth* character in a string, starting from zero.
 
 Suppose we declare a string, *foo*:
-
-	char *foo = "bar";
-
+```
+char *foo = "bar";
+```
 Humans might say, "The 2nd character in foo is 'a'", but the HIDIOT would disagree as it counts from zero. "The 2nd character in foo is 'r'", it'd say, if it could speak. With the right hardware it can actually speak, but that's a whole different project.
 
 The HIDIOT adds a single byte with the value of zero to the end of every string. This is the HIDIOT's way of telling where a string ends and is called a *null terminator*.
@@ -333,34 +333,34 @@ The HIDIOT adds a single byte with the value of zero to the end of every string.
 Because we're going to send multiple words, we need a way to distinguish between characters and words in Morse code. For our purposes, we're going to use the forward slash "/" to mean the break between a word. To keep it clean, we'll have a space on either side.
 
 The final piece of the puzzle is the ```send()``` function. We have 4 possible characters that could be passed to ```send()```. We can use ```if```'s for this, but ```if``` has a cleverer multi-choice cousin, ```switch()``` that we can use.
-
-	void send(char c){
-	  switch (c){
-	    case '-':
-	      on();
-	      delay(UNIT*3);
-	      off();
-	      break;
-	    case '.':
-	      on();
-	      delay(UNIT);
-	      off();
-	      break;
-	    case ' ':
-	      delay(UNIT*3);
-	      break;
-	    case '/':
-	      delay(UNIT);
-	      break;
-	  }
-	}
-
+```
+void send(char c){
+  switch (c){
+    case '-':
+      on();
+      delay(UNIT*3);
+      off();
+      break;
+    case '.':
+      on();
+      delay(UNIT);
+      off();
+      break;
+    case ' ':
+      delay(UNIT*3);
+      break;
+    case '/':
+      delay(UNIT);
+      break;
+  }
+}
+```
 Our ```send()``` function expects a single character, *c*. The ```switch()``` function is called with c as an argument, and we choose a selection of options using ```case```. Our first example looks at a dah. If *c* is a dah, turn on the LED. Wait for 3 UNIT lengths then switch off the LED. The ```break``` statement breaks out of the switch/case structure.
 
 For the dit it's a single unit wait, and for the space there's a 3 unit wait. The slash is a little different. When we have a space between words, we'd expect the string "i o" to look something like this:
-
-	.. / .
-
+```
+.. / .
+```
 If we wait for 7 units on a forward slash we'll also have waits for each space character each time round the loop. A delay of 7 units on the slash would mean a total wait of 13 units, which is way too long!
 
 |Character|Wait|
@@ -376,9 +376,9 @@ Put the code together and check against the example code provided in the HIDIOT 
 ![Morse code tree](/images/Morse-tree.svg)
 
 If all went well, you should have the Morse code for "hello". Lets try with a transmission from the Titanic.
-
-	const char *message = "-.-. --.- -.. / -.-. --.- -.. / -.-. --.- -.. / -.-. --.- -.. / -.-. --.- -.. / -.-. --.- -.. / -.. . / -- --. -.-- / ....- .---- .-.-.- ....- ....- / -. .-.-.- / ..... ----- .-.-.- ..--- ....- / .--"
-
+```
+const char *message = "-.-. --.- -.. / -.-. --.- -.. / -.-. --.- -.. / -.-. --.- -.. / -.-. --.- -.. / -.-. --.- -.. / -.. . / -- --. -.-- / ....- .---- .-.-.- ....- ....- / -. .-.-.- / ..... ----- .-.-.- ..--- ....- / .--"
+```
 Replace your code's message declaration at the top with the above. Now compile and upload, then see if you can spot any callsign patterns in the blinks.
 
 > The sequence .-.-.- is the symbol for a full stop, or period.
@@ -409,13 +409,13 @@ This video shows some of the transcripts played out on a spark gap Morse system.
 If you want to find out more about life as a radio operator on the Titanic, [here's](http://oceanliner.org/titanic_radio.htm) an excellent page with a newspaper cutting showing the kind of equipment they had to work with, and some interesting information about the Titanic's watery end.
 
 Finally, if you haven't soldered in your LED, you can also use a Piezo Buzzer on PB1 to make noise instead of using light. Replace the ```on()``` and ```off()``` functions with the following in your sketch:
+```
+void on(){        // Turn the LED on
+  tone(LED,440);
+}
 
-	void on(){        // Turn the LED on
-	  tone(LED,440);
-	}
-
-	void off(){       // Turn the LED off
-	  noTone(LED);
-	}
-
+void off(){       // Turn the LED off
+  noTone(LED);
+}
+```
 > Don't wire a speaker or headphone jack directly to the HIDIOT, as it could damage whatever's connected to it. Piezo buzzers will work if you replace the ```digitalWrite()``` with the ```tone()``` function.

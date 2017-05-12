@@ -28,46 +28,46 @@ In the same way, we can say that if waitOn drops to zero, turn the LED on, but t
 This is because computers are very, very specific and precise about their expectations.
 
 We already have an "if" in our logic, so we can easily translate this to a sketch. Lets look at an example.
-
-	if (waitOn > 0){
-		digitalWrite(ledPin, LOW);
-		delay(waitOff);
-	}
-
+```
+if (waitOn > 0){
+	digitalWrite(ledPin, LOW);
+	delay(waitOff);
+}
+```
 This tells the HIDIOT that if the value of waitOn is greater than 0 then to turn off the LED and wait for the length of the off period. If the value of waitOn is not greater than 0 then the code within the curly braces isn't executed.
 
 We can tell the HIDIOT to drop the value of waitOn each time round the loop by subtracting a value to from the variable such as this:
-
-	waitOn = waitOn - 10;
-
+```
+waitOn = waitOn - 10;
+```
 Try adding this functionality to your own blink code. If you get it right, your code should roughly look something like this:
+```
+// setup runs once on boot:
 
-	// setup runs once on boot:
+const int ledPin = 1;
+int waitOn = 500; // 0.5 Seconds
+int waitOff = 500; // 0.5 Seconds because the James Bond films always count down per second
 
-	const int ledPin = 1;
-	int waitOn = 500; // 0.5 Seconds
-	int waitOff = 500; // 0.5 Seconds because the James Bond films always count down per second
+void setup() {
+  // Tell the ATTiny that we want to use pin 1 as an output
+  pinMode(ledPin, OUTPUT); // Our LED is pin 1 and we're supplying electricity to it.
+}
 
-	void setup() {
-	  // Tell the ATTiny that we want to use pin 1 as an output
-	  pinMode(ledPin, OUTPUT); // Our LED is pin 1 and we're supplying electricity to it.
-	}
+// loop runs forever and ever:
+void loop() {
+  digitalWrite(ledPin, HIGH); // Make the LED turn on
+  delay(waitOn);               // wait
+  if (waitOn > 0){
+    waitOn = waitOn - 10;
+	waitOff = waitOff - 5;
+  }
 
-	// loop runs forever and ever:
-	void loop() {
-	  digitalWrite(ledPin, HIGH); // Make the LED turn on
-	  delay(waitOn);               // wait
-	  if (waitOn > 0){
-	    waitOn = waitOn - 10;
-		waitOff = waitOff - 5;
-	  }
-
-	  if (waitOn > 0){
-	    digitalWrite(ledPin, LOW ); // Make the LED turn off
-	    delay(waitOff);               // wait
-	  }
-	}
-
+  if (waitOn > 0){
+    digitalWrite(ledPin, LOW ); // Make the LED turn off
+    delay(waitOff);               // wait
+  }
+}
+```
 The code can is also be found in the HIDIOT Tutorial library under 4. Developing HIDIOT -> Mini Projects -> Blink_Warning.
 
 Don't worry if you didn't get it right first time. It's a new concept and takes a bit of getting used to. Try playing around with the code above.

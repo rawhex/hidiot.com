@@ -72,11 +72,11 @@ For now, all you need to know is that ```void``` means that when called, the fun
 The parentheses or "()" symbols are used to specify options, also called arguments. Again, we're not using them for now but will later on, so don't worry if it doesn't make complete sense. When referring to functions, we'll mention their name followed by a pair of parentheses just so we don't confuse them with other things we might find in our code.
 
 Because a function is a block of code, we use curly braces "{}" to mark where a block of code starts and ends. So when we see:
-
-	void setup() {
-		// Some code
-	}
-
+```
+void setup() {
+	// Some code
+}
+```
 This means that the function setup has no arguments, does some stuff between the curly braces and exits, sending nothing back to the code that called it. Lets take a look at what our two functions do.
 
 The setup() function runs once the program starts. It's normally used to set up inputs and outputs, and anything we need before the main part of our program runs.
@@ -88,12 +88,12 @@ The loop() function runs continuously until the HIDIOT is switched off or reset.
 Inside our functions are *statements*. A statement is an instruction to do something, and ends with a semi-colon ";". As well as statements, we also have comments. There are different ways of writing comments (to remind us what a piece of code does), but in our example, we're using single line comments, which start with "//". The very first line in the program is a comment, telling us that setup runs once on boot.
 
 Lets take a look at the setup() function and see what it does.
-
-	void setup() {
-		// Tell the ATTiny that we want to use pin 1 as an output
-		pinMode(1, OUTPUT); // Our LED is pin 1 and we're supplying electricity to it.
-	}
-
+```
+void setup() {
+	// Tell the ATTiny that we want to use pin 1 as an output
+	pinMode(1, OUTPUT); // Our LED is pin 1 and we're supplying electricity to it.
+}
+```
 The first line inside the function is a comment that describes what the function does. The first actual statement is a call to [pinMode()](https://www.arduino.cc/en/Reference/PinMode). The pinMode() function configures a pin to behave as an input (so we can read it), or an output so we can use it to send data or supply voltage.
 
 Unlike setup() and loop(), pinMode() expects two arguments. The first is the pin number (which we'll come to later), and the second is the mode, which can be INPUT or OUTPUT.
@@ -103,15 +103,15 @@ In our code, we're setting pin 1 to be an output. That means we want to be able 
 There's a full reference guide for all arduino functions [online](https://www.arduino.cc/en/Reference/HomePage).
 
 Lets look at the loop() function in our code next.
-
-	// loop runs forever and ever:
-	void loop() {
-	  digitalWrite(1, HIGH); // Make the LED turn on
-	  delay(1000);               // wait 1 second
-	  digitalWrite(1, LOW ); // Make the LED turn off
-	  delay(1000);               // wait 1 second
-	}
-
+```
+// loop runs forever and ever:
+void loop() {
+  digitalWrite(1, HIGH); // Make the LED turn on
+  delay(1000);               // wait 1 second
+  digitalWrite(1, LOW ); // Make the LED turn off
+  delay(1000);               // wait 1 second
+}
+```
 We know from what we've learned so far that the loop() function takes no arguments and returns nothing. There are two functions that are called in the loop, lets take a look at the digitalWrite() function.
 
 The ```digitalWrite()``` function allows us to turn a digital pin on and off. When we turn a pin on, we supply our chip's operating voltage and say that it's set to HIGH. When we turn a pin off, we supply a voltage of 0 volts and say it's set to LOW. Because our ATTiny85 is configured to run at 5 volts, setting it to HIGH means *supply 5 volts on this pin*. If our ATTiny85 ran at 3.3 volts, HIGH would mean *supply 3.3 volts on this pin*. This is important to know, as supplying 5 volts to a 3.3 volt device could damage or even destroy a 3.3 volt device.

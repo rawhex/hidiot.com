@@ -15,54 +15,54 @@ There are more ways to turn LED blinks into meaningful information than could be
 We're going to ask the HIDIOT to think of a number, then tell us what it is. We'll get the HIDIOT to blink once for each possible value, so the number 1 would be represented by one blink, while the number 10 would be represented by 10 blinks. So we know where numbers start and end, we'll have a long period with the LED turned off between each message.
 
 We already know how to generate random numbers, but we probably want our blinks to be the same length. We can even use a constant to define the delay between messages. There's one number we can't blink - the number zero. So we need to make sure we start at the number 1.
-
-	blinks = random(1,11); // this will generate a number between 1 and 10
-
+```
+blinks = random(1,11); // this will generate a number between 1 and 10
+```
 Now we have a random number of blinks, we need to work out how we can make it blink that number of times, each time the random number is generated. We could use a set of ```if``` statements for each possible number, but that would involve a lot of typing. Thankfully there's a different control flow structure known as a ```for``` loop for just this kind of situation.
 
 The [for](https://www.arduino.cc/en/Reference/For) control structure is fairly straightforward. Like ```if()```, it evaluates a condition inside parentheses but unlike ```if()``` has a very specific structure.
 
 Lets look at an example:
-
-	int i = 0;
-	for (i = 0; i < 100; i = i + 1) {
-		boop(i);
-	}
-
+```
+int i = 0;
+for (i = 0; i < 100; i = i + 1) {
+	boop(i);
+}
+```
 In this example, we declare a variable, ```i```. This is a throwaway variable used to hold a value that we use to count with. semi-colons are used to split up the different parts of the condition. The ```i < 100``` is a test. As long as the value of ```i``` is less than 100, the code block in the curly braces will continue to execute. If the value of ```i``` is less than 100, the next statement ```i = i + 1``` adds the number 1 to the value of ```i```.
 
 In our code block above, we call an imaginary ```boop()``` function with the value of ```i``` as an argument. Boop will be called 100 times, the first time as ```boop(0)``` and the last time as ```boop(99)```. Once ```i``` is equal to 100, it's no longer less than 100, and the for loop exits.
 
 Using the standard blink code as a starting point, can you modify the code to blink a random number of times? There's an example program in the HIDIOT Tutorial library under 4. Developing HIDIOT -> Mini Projects -> Blink_Codes.
+```
+// setup runs once on boot:
 
-	// setup runs once on boot:
+const int ledPin = 1;
+const int numberDelay = 2000; // Wait two seconds betwen random numbers
+int waitOn = 500; // 0.5 Seconds
+int waitOff = 500; // 0.5 Seconds
+int blinks = 11; // Our initial number of blinks. If we see 11 blinks, we know something is wrong with our code
+int i = 0; // A throwaway variable for our while loop
 
-	const int ledPin = 1;
-	const int numberDelay = 2000; // Wait two seconds betwen random numbers
-	int waitOn = 500; // 0.5 Seconds
-	int waitOff = 500; // 0.5 Seconds
-	int blinks = 11; // Our initial number of blinks. If we see 11 blinks, we know something is wrong with our code
-	int i = 0; // A throwaway variable for our while loop
+void setup() {
+  // Tell the ATTiny that we want to use pin 1 as an output
+  pinMode(ledPin, OUTPUT); // Our LED is pin 1 and we're supplying electricity to it.
+}
 
-	void setup() {
-	  // Tell the ATTiny that we want to use pin 1 as an output
-	  pinMode(ledPin, OUTPUT); // Our LED is pin 1 and we're supplying electricity to it.
-	}
+// loop runs forever and ever:
+void loop() {
+  blinks = random(1,11);
 
-	// loop runs forever and ever:
-	void loop() {
-	  blinks = random(1,11);
+  for (i = 0; i < blinks; i++){
+    digitalWrite(ledPin, HIGH); // Make the LED turn on
+    delay(waitOn);  // wait
+    digitalWrite(ledPin, LOW); // Make the LED turn off
+    delay(waitOff);
+  }
 
-	  for (i = 0; i < blinks; i++){
-	    digitalWrite(ledPin, HIGH); // Make the LED turn on
-	    delay(waitOn);  // wait
-	    digitalWrite(ledPin, LOW); // Make the LED turn off
-	    delay(waitOff);
-	  }
-
-	  delay(numberDelay); // Wait between numbers
-	}
-
+  delay(numberDelay); // Wait between numbers
+}
+```
 In the tutorial library code, there's a ```blinks``` variable that is assigned the number 11 when declared. We're using a random number between 1 and 10 for our blinks. If we see 11 blinks, we know that the random number was never generated.
 
 A random number is generated at the start of the loop and stored in the ```blinks``` variable. A ```for``` loop handles the blinking. It starts at zero and ends at one below the ```blinks``` variable, but because it starts at zero, it blinks the correct amount of times.

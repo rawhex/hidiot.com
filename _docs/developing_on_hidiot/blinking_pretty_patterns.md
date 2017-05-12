@@ -25,13 +25,13 @@ Perhaps you want something a little less predictable though. Lets try to make it
 The ```random()``` function can be used to generate a pseudo-random number within a programmer-controlled range. Computers lack the imagination to come up with truly random numbers, so we can use various tricks to make things that feel more random. We're not really going to use those tricks here, so you may notice that the blink pattern remains the same each time you power up your HIDIOT. Don't worry, we'll use randomness more properly on one of the later projects.
 
 The [random()](https://www.arduino.cc/en/Reference/Random) function takes either one or two arguments. If two arguments are supplied, then the first is the minimum number that could be returned, and the second argument is the maximum minus 1. For example:
-
-	waitOn = random(1,7);
-
+```
+waitOn = random(1,7);
+```
 Will return a random number between 1 and 6 (max - 1). If only one argument is supplied, then it's considered to be the maximum minus 1, and the minimum is automatically set to 0.
-
-	waitOn = random(6);
-
+```
+waitOn = random(6);
+```
 Will set the value of ```waitOn``` to a random number between 0 and 5.
 
 > Humans tend to count from 1, but computers count from 0.
@@ -39,10 +39,10 @@ Will set the value of ```waitOn``` to a random number between 0 and 5.
 If we were to set the value of waitOn to a random number when it's declared at the start of our program, the value will only be set once. If we set the value of waitOn to a random number in ```loop()```, then it'll be set each time the loop runs around.
 
 We want a reasonable minimum time for an on or off period. 1/8th of a second is reasonable (125 milliseconds). In our ```loop()``` function, we can simply add the following to the start of the function:
-
-	waitOn = random(125,1000);
-	waitOff = random(125,1000);
-
+```
+waitOn = random(125,1000);
+waitOff = random(125,1000);
+```
 And the LED will spend a different amount of time randomly on and off. Note that you didn't have to specify ```int``` at when you changed it's value. We only specify the data type when a variable is declared.
 
 Try to add your own code first, then look at the code in File -> Examples -> HIDIOT Tutorials -> 4. Developing HIDIOT -> Mini Projects -> Pretty_Patterns -> Random and see if it's different to yours. As long as both programs work, it doesn't matter if yours is different.
