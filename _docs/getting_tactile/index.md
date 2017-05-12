@@ -15,9 +15,9 @@ In this project tutorial you will learn:
 
 Lets look at the projects in this tutorial.
 
-#### Getting started with tact switches 
+#### Getting started with tact switches
 
-In this project, we'll look at the different types of switches we can use and how they work. We'll look at how to make things happen when you press a button and use the HIDIOT's built in tact switches to make things happen. 
+In this project, we'll look at the different types of switches we can use and how they work. We'll look at how to make things happen when you press a button and use the HIDIOT's built in tact switches to make things happen.
 
 The [Getting started with tact switches](/getting_tactile/getting_started/) project is about 20 minutes long including breaks and videos.
 

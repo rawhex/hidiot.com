@@ -1,6 +1,6 @@
 ---
 title: Introduction
-category: Exploring Morse code 
+category: Exploring Morse code
 order: 1
 ---
 
@@ -10,7 +10,7 @@ Here's Tara at 5 years old using Morse code to communicate over Ham Radio:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8Wg-723nOLc" frameborder="0" allowfullscreen></iframe>
 
-We’re going to learn Morse code for a different reason to Tara. The  ATTiny85 has 8 pins that you can use with other components. Some of these pins are already used for things like USB. Sometimes  you need information from the HIDIOT but don't have many free pins. 
+We’re going to learn Morse code for a different reason to Tara. The  ATTiny85 has 8 pins that you can use with other components. Some of these pins are already used for things like USB. Sometimes  you need information from the HIDIOT but don't have many free pins.
 
 Morse code can work with a  light, a buzzer or anything that can be used to send a signal. If you  need the HIDIOT to tell you something complex, it’s the most efficient way for it to tell you.
 
@@ -19,7 +19,7 @@ In this project tutorial you will learn:
 * Morse code basics
 * How to 'copy' Morse code
 * How to use a Morse code tree to convert between Morse and the Latin alphabet
-* Control structures 
+* Control structures
 * How to use the different types of memory available in the HIDIOT
 
 

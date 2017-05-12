@@ -1,6 +1,6 @@
 ---
 title: Licensing
-category: Using this documentation 
+category: Using this documentation
 order: 1
 ---
 
@@ -18,7 +18,7 @@ We believe that this is the best repository for definitive information about the
 
 ### Can I use this in my class, school or college?
 
-If it's not a derivative work, absolutely! You are welcome to use this material to instruct or teach others. 
+If it's not a derivative work, absolutely! You are welcome to use this material to instruct or teach others.
 
 What you're expressly *not* allowed to do is sell this material, or use this material for profit. Teaching a class with this material is fine. Charging for the class is fine. Charging for access to the material (beyond reasonable production costs) without a commercial licence is absolutely not permitted.
 
@@ -27,4 +27,3 @@ If you're using this material as part of an essay or report, please just make su
 ### I would like to reuse some of this material in my own works, can I do that?
 
 Please get in touch with us via the email address at the top of the page, so we can discuss your needs with you. We're not against people using the material, we just want to ensure that quality is maintained and that it's not inappropriately claiming association/ownership where incorrect.
-

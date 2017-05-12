@@ -7,7 +7,7 @@ order: 3
 ### Electrons
 All of the things that we touch and experience are made of something we call *matter*. Matter is made of tiny particles that are so small we can't even see them. We call these *atoms*. Atoms themselves are made up of even smaller particles, one of which is called an *electron*. Electrons are negatively charged particles that orbit around atoms, like planets orbiting the sun.
 
-When we apply energy to atoms, they start to get quite excited. When some atoms get excited, the electrons start to jump from one atom to the next. These types of atoms are called *conductors*, because they conduct electrical current. These atoms are normally found in metals. 
+When we apply energy to atoms, they start to get quite excited. When some atoms get excited, the electrons start to jump from one atom to the next. These types of atoms are called *conductors*, because they conduct electrical current. These atoms are normally found in metals.
 
 Atoms that don't let the electrons jump are called *insulators*. Common insulators include rubber and wood.
 

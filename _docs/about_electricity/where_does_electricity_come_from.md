@@ -1,5 +1,5 @@
 ---
-title: Where does Electricity come from? 
+title: Where does Electricity come from?
 category: About Electricity
 order: 4
 ---

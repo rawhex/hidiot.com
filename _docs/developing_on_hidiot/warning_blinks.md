@@ -48,7 +48,7 @@ Try adding this functionality to your own blink code. If you get it right, your 
 	int waitOn = 500; // 0.5 Seconds
 	int waitOff = 500; // 0.5 Seconds because the James Bond films always count down per second
 
-	void setup() {                
+	void setup() {
 	  // Tell the ATTiny that we want to use pin 1 as an output
 	  pinMode(ledPin, OUTPUT); // Our LED is pin 1 and we're supplying electricity to it.
 	}

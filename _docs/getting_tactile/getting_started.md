@@ -3,7 +3,7 @@ title: Getting started with tact switches
 category: Getting tactile with HIDIOT
 order: 2
 ---
- 
+
 ![A HIDIOT with buttons](/images/hidiot-0_9a.jpg)
 
 If you look towards the left of your HIDIOT you'll see two buttons (or two spaces for buttons if you didn't solder them in). Professionals call them *momentary tactiles switches* or *tact switches* for short. There are many different types of button and switch out there, and you can use them all with your HIDIOT.
@@ -49,14 +49,14 @@ The first thing we need to do is add some simple declarations to tell our HIDIOT
 	#define BUT1 PB0
 	#define BUT2 PB2
 	#define LED PB1
-	
+
 	int but1State = 0;
 	int but2State = 0;
 
 We'll add basic ```on()``` and ```off()``` functions so we can control either an LED or a buzzer.
 
 	void on(){        // Turn the LED on
-	
+
 	  #ifdef BEEP
 	    tone(LED,550); // If our pin is connected to a piezo we can use tone()
 	  #endif
@@ -64,7 +64,7 @@ We'll add basic ```on()``` and ```off()``` functions so we can control either an
 	    digitalWrite(LED, HIGH);
 	  #endif
 	}
-	
+
 	void off(){       // Turn the LED off
 	  #ifdef BEEP
 	   noTone(LED); // turn off piezo
@@ -91,13 +91,13 @@ Finally, our ```loop()``` function checks the state of either button. If either 
 	  // put your main code here, to run repeatedly:
 	  but1State = digitalRead(BUT1);
 	  but2State = digitalRead(BUT2);
-	
+
 	  if (but1State == HIGH || but2State == HIGH) {
 	    on();
 	  } else {
 	    off();
 	  }
-	
+
 	}
 
 The ```||``` is a way of chaining together two conditions so they apply if either one is true. We'll look at it in depth later.
@@ -128,7 +128,7 @@ Using INPUT_PULLUP pulls the pin up to 5 volts when the circuit is open. When th
 	  // put your main code here, to run repeatedly:
 	  but1State = digitalRead(BUT1);
 	  but2State = digitalRead(BUT2);
-	
+
 	  if (but1State == LOW || but2State == LOW) {
 	    on();
 	  } else {
@@ -192,4 +192,4 @@ Adam Westbrook made a brilliant short film about Shannon's role in the leap from
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rJszZebxL3E" frameborder="0" allowfullscreen></iframe>
 
-If you want to understand how logic operators work under the hood, SnugglyHappyMathTime has a really great introduction to logic in maths. Don't worry if this goes over your head. We'll make sure we spend some time explaining operators as we encounter them. 
+If you want to understand how logic operators work under the hood, SnugglyHappyMathTime has a really great introduction to logic in maths. Don't worry if this goes over your head. We'll make sure we spend some time explaining operators as we encounter them.

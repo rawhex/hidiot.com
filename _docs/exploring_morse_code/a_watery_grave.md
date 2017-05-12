@@ -196,7 +196,7 @@ We can use the same trick as we did with ```dah()``` and use multiples of UNIT t
 Our ```setup()``` function should be the same as our earlier blinking code:
 
 	// setup starts once when you power on your HIDIOT:
-	void setup() {                
+	void setup() {
 	  // initialize the digital pin as an output.
 	  pinMode(LED, OUTPUT); // Tells the HIDIOT we want to use the pin to output a signal
 	}

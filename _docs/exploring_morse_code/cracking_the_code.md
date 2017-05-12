@@ -1,9 +1,9 @@
 ---
-title: Cracking the code 
+title: Cracking the code
 category: Exploring Morse code
 order: 2
 ---
- 
+
 ![Picture of Samuel Morse, 1840](/images/sam_morse.jpg)
 
 Samuel Morse was an American obsessed with the new field of electricity. Heartbroken that he didn't know about his wife's sickness and death while he was away painting a portrait, he invented the electric telegraph. The telegraph was the first way to send messages almost instantly from one place to another over a long distance. Previously, messages were sent by horserider or ship. The telegraph changed that, and with it the world.
@@ -12,7 +12,7 @@ His telegraph used a code that also allowed ships to send messages to the shore 
 
 Morse code has been used in all kinds of ways. The RMS Titanic, a famous unsinkable cruise liner used Morse code throughout it's maiden voyage, and Morse code was used by the radio operators to send a distress signal for help.
 
-Prisoners of War have used Morse Code to blink secret messages in the hope that people will pick them up, and Morse Code is still used today across the world by amateur radio users. 
+Prisoners of War have used Morse Code to blink secret messages in the hope that people will pick them up, and Morse Code is still used today across the world by amateur radio users.
 
 If you followed the mini project series in our last tutorial, you'll have built a program to blink numbers using the LED. We can use Morse code to blink out more useful messages. But to do this, first we have to learn how to understand Morse code.
 
@@ -42,9 +42,9 @@ If we want to spell out a whole word in morse code, we can use the dots and dash
 	I: ..
 	O: ---
 	T: -
-	
-	HIDIOT: . . .   . .   - . .   . .   - - -   -   
-	
+
+	HIDIOT: . . .   . .   - . .   . .   - - -   -
+
 Because replacing letters with dits and dahs can be quite painful to type, Samuel Morse looked at the popularity of letters in the alphabet when designing his code, and made the most common letters the shortest. He also structured letters and numbers in the form of a tree, making it easier to visualise.
 
 ![Morse code tree](/images/morse-tree.svg)
@@ -162,13 +162,13 @@ Cool! We have our first part of the message! Now to try the second set of 7 char
 	  _       _       _       _       _     _      _
 
 Did you get all the letters from the tree? If so, lets try the next set. This time, you can work out the left and right, and fill in the letters.
-	  
+
 	. . -   .   - .   . . -   . . .   -   .
 	_ _ _   _   _ _   _ _ _   _ _ _   _   _
 	    _   _     _       _       _       _
 
 Ok, final set of 8 characters!
-	
+
 	   - . .   .   . . .   . -   - .   . .   - -   - - -
 
 If you speak Spanish, you should be able to tell what the message is. If you don't, it's still pretty hard to work out where words start and end, let alone what the message is. Thankfully we live in the 21st century, and can use Google translate. Copy and paste the words without spaces into [Google Translate](https://translate.google.com/). Set the source language to Spanish and the destination language to your own. There should be a message on the Google page that has a suggestion for spaces. Click on the link and the text should translate.

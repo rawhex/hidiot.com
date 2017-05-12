@@ -89,7 +89,7 @@ Inside our functions are *statements*. A statement is an instruction to do somet
 
 Lets take a look at the setup() function and see what it does.
 
-	void setup() {                
+	void setup() {
 		// Tell the ATTiny that we want to use pin 1 as an output
 		pinMode(1, OUTPUT); // Our LED is pin 1 and we're supplying electricity to it.
 	}

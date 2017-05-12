@@ -44,7 +44,7 @@ Using the standard blink code as a starting point, can you modify the code to bl
 	int blinks = 11; // Our initial number of blinks. If we see 11 blinks, we know something is wrong with our code
 	int i = 0; // A throwaway variable for our while loop
 
-	void setup() {                
+	void setup() {
 	  // Tell the ATTiny that we want to use pin 1 as an output
 	  pinMode(ledPin, OUTPUT); // Our LED is pin 1 and we're supplying electricity to it.
 	}

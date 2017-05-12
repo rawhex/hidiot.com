@@ -66,7 +66,7 @@ Now we know what a constant and a variable are, and hopefully you've had a nice 
 If you open up the Blink code, you should see the following in the Arduino IDE:
 
 	// setup runs once on boot:
-	void setup() {                
+	void setup() {
 	  // Tell the ATTiny that we want to use pin 1 as an output
 	  pinMode(1, OUTPUT); // Our LED is pin 1 and we're supplying electricity to it.
 	}
@@ -97,7 +97,7 @@ Your code should now look like this:
 	// setup runs once on boot:
 
 	const int ledPin = 1;
-	void setup() {                
+	void setup() {
 	  // Tell the ATTiny that we want to use pin 1 as an output
 	  pinMode(ledPin, OUTPUT); // Our LED is pin 1 and we're supplying electricity to it.
 	}
@@ -123,7 +123,7 @@ Press return once again just to split your declarations from your code so it loo
 	const int ledPin = 1;
 	int wait = 1000; // 1 Second
 
-	void setup() {                
+	void setup() {
 	  // Tell the ATTiny that we want to use pin 1 as an output
 	  pinMode(ledPin, OUTPUT); // Our LED is pin 1 and we're supplying electricity to it.
 	}
