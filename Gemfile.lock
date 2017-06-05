@@ -1,8 +1,9 @@
 GIT
   remote: https://github.com/rawhex/hidiot-theme.git
-  revision: b2a5a6b4ffda0a97840854ad74e857d97f0bfe70
+  revision: 90b15375c2104f0d1a751777d3dd84e134ad3f1a
+  branch: master
   specs:
-    hidiot-theme (0.1.0)
+    hidiot-theme (0.1.1)
       jekyll (~> 3.4)
 
 GEM
