@@ -2,7 +2,7 @@
 layout:     event
 title:      "Hack In The Box Amsterdam"
 subtitle:   "Amsterdam Commsec Village"
-date:       2017-04-13 00:00:00 +0000
+date:       2017-04-13 09:00:00 +0000
 location:   "Amsterdam, Netherlands"
 time_start: "9:00"
 time_end:   "18:00"

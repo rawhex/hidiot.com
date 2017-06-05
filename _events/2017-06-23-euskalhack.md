@@ -2,7 +2,7 @@
 layout:     event
 title:      "Euskalhack"
 subtitle:   "Basque Security Congress"
-date:       2017-06-23 00:00:00 +0000
+date:       2017-06-23 09:00:00 +0000
 location:   "San Sebastian, Spain"
 time_start: "9:00"
 time_end:   "18:00"
