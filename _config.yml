@@ -43,6 +43,10 @@ collections:
     title: Documentation
     permalink: /:path/
     output: true
+  prototype:
+    title: Prototype Documentation
+    permalink: /prototypes/:path/
+    output: true
 
 defaults:
   -
