@@ -3,28 +3,25 @@ title: Finishing up
 category: Building a HIDIOT
 order: 4
 ---
+We're almost there. It's time to solder the big C2 capacitor and some tact switches, then you should be ready to start using your HIDIOT.
 
 ### C2, The Big Capacitor
 
-![One 4.7uF capacitor](/images/c2_on_board.jpg)
+![One 4.7uF capacitor](/images/c2.jpg)
 
-C2 Is a 4.7uF Capacitor that smooths out large current ripples. It works with C1 to ensure that the board doesn't get damaged by spikes caused by devices connecting and disconnecting over USB.
+C2 Is a 4.7uF Capacitor that smooths out large current ripples. It helps protect the HIDIOT from power spikes over USB. C2 is a different type of capacitor to C1. C2 Is an *electrolytic* capacitor. Like a battery, it uses an electrolyte inside the device. Because it uses an electrolyte, the capacitor is polarised. This means you must solder it the right way round on the board. 
 
-C2 is a different type of capacitor to C1. C2 Is an *electrolytic* capacitor. This means it has to be put the right way round on the board. A long grey strip runs down one side of the capacitor to the cathode leg (negative), and the other leg is the anode (positive).
+The capacitor has a long grey strip that points to the negative (cathode) lead. On the board, the negative side is indicated on a board by the line next to the circle, as shown below.
 
-The negative side is normally indicated on a board by the line next to the circle, as shown below.
+![Cathode orientation](/images/c2_polarity.jpg)
 
-![Cathode orientation](/images/0_9a_c2.jpg)
+> If the capacitor is soldered the wrong way round, it won't work. It could cause damage to your USB hub or even your computer. Make sure it's the right way round *before* you solder.
 
-> If the capacitor is soldered the wrong way round, it won't work. It could cause damage to your USB hub or even your computer. Make sure it's the right way round *before* your solder.
-
-Put the part through the holes with the correct orientation, but before you bend the pins back, bend the capacitor over to your left. When viewed from the top right, it should look something like the below:
+Put the part through the holes with the correct orientation. Before you bend the pins back, bend the capacitor over towards the DIP socket. This keeps your HIDIOT's profile low enough to fit in a pocket or wallet without bending anything.
 
 ![Capacitor close up](/images/cap_orientation.jpg)
 
-Note the PWR LED is on the right, and the 4 68 Ohm resistors on the bottom.
-
-When holding the HIDIOT with the USB connector in the top right, the grey strip should be facing upwards, or possibly away from you.
+The text on the capacitor should face the R2 and R3 resistors at the bottom of the board. When holding the HIDIOT with the USB connector in the top right, the grey strip should be facing upwards.
 
 Once you're comfortable with the orientation, bend the legs and solder the part.
 
@@ -32,9 +29,9 @@ Once you're comfortable with the orientation, bend the legs and solder the part.
 
 ![Tacticle switches](/images/tact_switches.jpg)
 
-You might think of these as buttons, but in engineering and electronics, we call them tactile switches, or tact switches for short. Our tact switches are used for you to provide input to the HIDIOT. These components are optional, and can be put in now, later or not at all.
+You might call them buttons. In engineering and electronics, they're called tactile or *tact* switches. Our tact switches are used for you to provide input to the HIDIOT.
 
-> If it's your first HIDIOT, you'll need tact switches for some of the tutorials. If you'd rather not put them in right now, that's fine too.
+> If it's your first HIDIOT, you'll need tact switches for some of the tutorials. The HIDIOT will work without the tact switches. If you'd rather not put them in right now that's fine too.
 
 Like C2 and the diodes (and our ATTiny85) the tact switches care about orientation. Unlike C2, the diodes and the ATTiny, there's only two ways the tact switches will fit, and either way is fine. Make sure they're properly pushed through and you're ready to solder them in.
 
@@ -44,11 +41,30 @@ Like C2 and the diodes (and our ATTiny85) the tact switches care about orientati
 
 By now you should be a seasoned pro at soldering. If you're building another HIDIOT, you'll manage to do it a lot more quickly. There's one thing missing, which is the brains of the device, the ATTiny85. We'll come to that in a moment.
 
-When engineers build a new electronics platform, they test it extensively to make sure that it works the way it's meant to. We're going to do some basic testing just to make sure that it's working correctly.
+When engineers build something, they test it to make sure that it works properly. We're going to do some basic testing to make sure our HIDIOT works correctly.
 
 To test your HIDIOT, you'll need:
 
+* Your HIDIOT
 * A USB 2.0 Hub connected to a computer, or a USB charger
+
+![Checking the underside](/images/underside_check.jpg)
+
+Firstly we'll do a visual test. Flip the HIDIOT onto it's underside and take a look at your solder points. You want to make sure that the solder only touches the pins it's meant to touch. Solder on one pin must not touch a different pin.
+
+> Solder that joins two separate points on the board together is called a *bridge*. This is bad and can permanently damage your computer if plugged in.
+
+Here's DestroyerMariko fixing a bridge on some stripboard. (*Warning: DestroyerMariko is rather sweary in her video*).
+
+{% youtube z0PFiGZKzL8 %}
+
+To get rid of a bridge on the HIDIOT, heat up your soldering iron and drag it between the two bridging points. Use the dragging to pull the solder away from itself. You can then snip the excess solder off and the bridge should be gone. There are better approaches, but this one doesn't need extra kit.
+
+> If you have a bridge you can't get rid of, you can use solder wick to absorb solder stuck to the board.
+
+![HIDIOT without ATTiny85](/images/no_chip.jpg)
+
+Flip the board over and do inspect the front of the board. Check your polarised components are the right way round. If you're not sure, then check the orientation matches the picture above. If you're happy with your board, then it's time to move on.
 
 Connect the HIDIOT to the hub or the charger and check to see if the power light comes on. Don't worry if it doesn't. It might just be that your LED was put in the wrong way round.
 
@@ -66,21 +82,23 @@ The ATTiny85 is the 8-pin chip and (hopefully) the last piece that hasn't been c
 
 Remember that circle in the rectangle on the board, where you put the DIP socket?
 
-![DIP socket location](/images/0_9a_dip.jpg)
+![DIP socket location](/images/dip.jpg)
 
 There's also a circle on the ATTiny chip. That's why the dip switch has the notch on the one side. The notch is supposed to be on the same side as the circle on the chip. The circle on the chip is supposed be the same way round as the circle on the board.
 
 Pop your chip in and looking across from the bottom of the board it should look like this:
 
-![ATTiny85 on board](/images/attiny.jpg)
+![ATTiny85 on board](/images/hidiot_ready.jpg)
 
-Note the row of resistors on the bottom, the USB connector on the top and that the chip's circle is on the bottom left. If yours matches, it's the right way round. If not, take it out and put it back in.
+Note the row of resistors on the bottom, the USB connector on the top and that the chip's circle is on the bottom left. If yours matches, it's the right way round. If not, take it out, turn it around and put it back in.
 
 ### Powering it all up
 
-Plug your HIDIOT back into your hub or USB charger and you should see the power light come on. If you're using an official HIDIOT, LED1 should start blinking after a few seconds. If you're using a clone, the manufacturer may or may not have put anything on there, or flashed it at all.
+Plug your HIDIOT back into your hub or USB charger and you should see the power light come on. Hold your finger over (but don't touch) the ATTiny85 for a few seconds. 
 
-If you don't see a blinking light after 5 seconds, hold your finger over the top of the ATTiny85. If it's hot, then unplug the HIDIOT from the USB connection and let it cool down. Make sure the ATTiny is seated in the socket the right way around and try again.
+If it's hot, then unplug the HIDIOT from the USB connection and let it cool down. Make sure the ATTiny is seated in the socket the right way around and try again.
+
+If it's not hot, it looks like your HIDIOT is working and is waiting for you to give it something to do! 
 
 ### What To Do Next
 
@@ -92,4 +110,8 @@ Why is it high five time? Because most people go their entire lives only using t
 
 Let that sink in for a moment. If you don't believe me, ask your friends how many have soldered their own circuit boards from scratch. Unless you built your HIDIOT in class at school, you can probably count them on one hand.
 
-While you're basking in the glow of a job well done, you might want to look at [how PCBs work](https://www.youtube.com/watch?v=H9pGbLJknDk).
+{% youtube H9pGbLJknDk %}
+
+While you're basking in the glow of a job well done, you might want to look at how PCBs work.
+
+When you're ready we'll install the software needed to start [cutting code](/cutting_code/index/) with the HIDIOT.

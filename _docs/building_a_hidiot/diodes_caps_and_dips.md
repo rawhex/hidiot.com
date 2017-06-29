@@ -4,67 +4,69 @@ category: Building a HIDIOT
 order: 3
 ---
 
-![Two Zener and one 1N456A diode](/images/0_9_diodes.jpg)
+![Two Zener and one 1N456A diode](/images/diodes.jpg)
 
-Ok, next up we need to put in our diodes. Diodes do several different things, but mostly make sure only a certain amount of current and voltage flows in a certain direction. We use two types of diodes - two Zener diodes and a 1N456A.
+Now we need to solder our diodes. Diodes make sure only a certain amount of current and voltage flows in one direction. We use two types of diodes - a 1N456A (shown above in black) diode and two 3.6v Zener diodes.
 
-> We also use LEDs, which are Light Emitting Diodes, but we pretend they're not really diodes for the purposes of our circuit.
+> We also use LEDs, which are Light Emitting Diodes. We treat LEDs differently to normal diodes.
 
-USB uses a 5v power supply, but the data lines are rated for 0-3.6 volts. This is so that devices that need 5v can be powered over USB, but communication needs to happen at no higher than 3.6v or it might damage your computer. We use the Zener diodes to clip the voltage to 3.6v and stop it from frying your hub.
+USB provides a 5v power supply, but communication is over lines running at 0-3.6 volts. This is mostly for compatibility with 5 and 3.3 volt components. The HIDIOT runs on 5 volts, but need to drop some connections to 3.6 volts to talk to the computer. The Zener diodes drop the voltage and stop the HIDIOT from damaging your computer when you plug it in.
 
-The 1N456A diode is used to protect your computer or USB hub from any major voltage spikes. Imagine you connect a motor to your HIDIOT that needs 12v. You use a regulator to provide the 12 volts but you drop a screw on the board, causing the 12v lines and the USB 5v positive line to touch. Without this diode, this *will* damage your computer. With this diode, it only *might* damage your computer.
+The 1N456A diode protects your computer or USB hub from major voltage spikes.
 
-> Your HIDIOT is designed to provide some protection from problems with itself, but not from mistakes you make building or using it. If in doubt, don't connect it to something you're not prepared to lose.
+> We designed the HIDIOT to protect your computer from itself in normal operation. It won't protect your computer from mistakes you make building or using it. If in doubt, don't connect it to something you're not prepared to lose.
 
-Because the diodes are used to manage the flow of electricity, we **must** make sure they are placed in the right direction. If we get them the wrong way round, they'll block the flow of current around the circuit and it won't work.
+Because diodes manage the flow of electricity, they **must** be placed in the right direction. If we get them the wrong way round, they'll block the flow of current around the circuit and your HIDIOT won't work.
 
 The Zener diodes are orange, with a little black line on the bottom. Both Zeners go at the top of the board, next to the breakout area. If you look very closely you'll see D1 and D2 in tiny writing. Put the Zeners through the holes in the front, with the black line on the bottom side.
 
 Our 1N456A is more clearly labelled as D3 and is just to the right of where the Zeners go. The 1N456A is a black diode with a grey line at the bottom. Place the 1N456A through the D3 hole, so that the grey line is at the bottom. You should have something that looks like this:
 
-![Two Zener and one 1N456A diode](/images/0_9_diodes.jpg)
+![Two Zener and one 1N456A diode](/images/diodes_on_board.jpg)
 
 Before you do any soldering, make sure you're happy with the orientation of the diodes. If you're unsure, take a picture of what you have and ask the [community](https://www.reddit.com/r/hidiot/) *before* you start soldering.
 
-If you get it wrong, you'll have to desolder the diodes and start again. For this reason, if you're not sure about the diodes at this point you can check them with a multimeter and leave the legs unsnipped until it's all working. It's going to be difficult to resolder the diodes once you've snipped the legs.
+If you get it wrong, you'll have to desolder the diodes and start again. If you're unsure of the diodes' orientation you can leave the legs unsnipped until it's working. It's going to be difficult to resolder the diodes once you've snipped the legs.
 
-### R5 and the C1 Capacitor
+### The C1 Capacitor
 
-![1.5k ohm resistor & 0.1uF capacitor](/images/r5-c1.jpg)
+![0.1uF capacitor](/images/c1.jpg)
 
-Now we have our other resistors and the diodes in place, we're almost electrically complete!
+With resistors and the diodes in place, we're almost electrically complete!
 
-R5 is a 1.5k ohm resistor, that is used to tell the USB host that they're dealing with a low speed USB device. It's the only resistor that doesn't look like the other 4 you put in earlier.
+The C1 capacitor is the small yellow one, rated at 0.1uF. It's used in with the bigger capacitor to smooth out power noise caused by USB connections. The small capacitor deals with quick current and voltage changes. The bigger capacitor regulates slower but larger current ripples.
 
-Our C1 capacitor is the small yellow one, rated at 0.1uF. It's used in combination with the bigger capacitor to smooth out power noise caused by USB connections. The small yellow one works for very quick changes in current and voltage (such as those caused by a short circuit), while the bigger capacitor regulates slower but larger current ripples.
+C1 doesn't care which way round it is, so put it through the rectangular hole below D3.
 
-Neither R5 nor C1 care about which way round they go, so put them through their holes and bend the pins back. You might need a pair of long nosed pliers to pull C1 all the way through. It's fine if it's not all the way through, and you can bend it over if it's annoying.
+![C1 on a board](/images/c1_on_board.jpg)
 
-Once they're through and the legs are bent back you should be ready to solder them in.
+You might need a pair of long nosed pliers to pull C1 all the way through. It's fine if it's not all the way through, and you can bend it over if it's annoying.
+
+Once the legs are through and bent back you're ready to solder.
 
 ### The DIP Socket
 
 ![DIP socket on board](/images/dip_on_board.jpg)
 
-Our ATTiny85 uses a DIP socket to allow you to swap out ATTiny85 chips. If you build your own projects this is really handy for updating software and prototyping new projects with your HIDIOT.
+Our ATTiny85 uses a DIP socket to hold the chip. This makes it easy to swap ATTiny85s from HIDIOT to final project and back.
 
-The dip socket is the socket with 8 pins on one side and 8 holes in the other. There's a small notch on one-side.
+The dip socket is the socket with 8 pins on one side and 8 holes in the other. There's a small notch on one-side. This notch tells electrical engineers which way round to insert a chip.
 
 ![DIP socket close up](/images/dip_socket.png)
 
 On the board, we can see 8 holes and a circle inside a rectangle. The circle is on the bottom left.
 
-![DIP socket location](/images/0_9a_dip.jpg)
+![DIP socket location](/images/circle_on_dip.jpg)
 
-The notch should be on the left hand side. If you get it wrong it's not going to affect things electrically, but you want it to be lined up correctly as the ATTiny needs to be put in the right way round.
+The picture above shows both an empty board and a board with a chip on it. The circle shows the chip's preferred orientation.
 
-Pop the dip socket into the holes with the notch on the same side as the circle, then flip the board over and solder the part to the board.
+The notch should be on the same side as the circle. It won't affect anything electronic if it's the wrong way around. The ATTiny85 gets very hot if it's the wrong way round. If this happens, power down the HIDIOT, let the chip cool down and turn it around before trying again. As long as you're fairly quick it should be fine.
+
+Place the dip socket through the holes with the notch on the same side as the circle. With a finger on the top of the dip socket, flip the board over and push it onto the mat so the holes poke through.
 
 The DIP socket pins aren't very long, so it helps to push down on the board a little when soldering the board together.
 
-> Solder a pin at one side of the board first, then the diagonal opposite. Now solder the other corners. Finally solder the middle pins one side at a time.
-
-Soldering the corner pins first will ensure that the pins are fully through the board and make it easier to solder later on.
+> Solder a pin at one side of the socket first, then the diagonal opposite. Now solder the other corners. Finally solder the middle pins one side at a time. Soldering the corner pins first keeps the socket from moving or falling off the board.
 
 ### LEDs
 
@@ -76,10 +78,8 @@ LEDs are Light Emitting Diodes. Because they're diodes, they care about their or
 
 ![Anode and cathode orientation](/images/led_orientation.jpg)
 
-As with any other diode, check your orientation before soldering, and if you're not really sure, don't snip the legs.
+As with any other diode, check your orientation before soldering. If you're really unsure, don't snip the legs. If you make a mistake, the LEDs won't light up but the board will still work.
 
-If you make a mistake, the LEDs won't light up but the board will still work.
-
-Ok, you're doing great! Not long to go now. We have C2 to solder in, and (optionally) the two tact switches (buttons to you and me). If you haven't taken a break already, now would be a good time to do so. If you have, and you fancy another then you've already earned it! Just remember to switch off your soldering iron when it's not being used.
+Ok, you're doing great! Not long to go now. Next we'll solder C2 and the two tact switches. If you haven't taken a break already, now would be a good time to do so. If you have, and you fancy another then you've already earned it! Just remember to switch off your soldering iron when it's not being used.
 
 Once you're ready to carry on, [click here](/building_a_hidiot/finishing_up/) to go to the next section.
