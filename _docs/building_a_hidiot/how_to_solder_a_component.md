@@ -20,11 +20,12 @@ Building a HIDIOT is easy. We designed it so that it's almost impossible to get 
 
 * Your HIDIOT parts kit
 * A HIDIOT Printed Circuit Board (PCB)
-* A Soldering iron with cleaning sponge and stand
-* A helping hand (optional, but recommended for beginners)
-* A soldering mat or heat resistance surface
+* A [soldering iron](http://amzn.to/2stz66E) with cleaning sponge and stand
+* Some [solder](http://amzn.to/2utP2r7)
+* A [soldering mat](http://amzn.to/2ssXndi) or heat resistant surface
 * A well-ventilated space
-* Safety goggles for anyone near the soldering area
+* [Safety goggles](http://amzn.to/2sK3zl9) for anyone near the soldering area
+* [PCB Snips](http://amzn.to/2tkKu7U).
 
 If you're unfamiliar with soldering, you should also get:
 
