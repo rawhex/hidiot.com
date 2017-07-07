@@ -34,7 +34,9 @@ When connecting your HIDIOT you want to be sure that you're not going to damage 
 
 We've created a video to walk you through setting up your Windows 10 system for the HIDIOT. Follow the video. Pause, then try each step as you go, and then carry on to the next step. It should take about 15-30 minutes depending on how comfortable you are with Windows 10.
 
-{% vimeo 214225374 %}<br />
+{% youtube DDJB6gK5-OA %}<br />
+
+> Now would be a good time to [subscribe to our YouTube channel](https://www.youtube.com/channel/UC3adAald3uLCeTI2TSCA1dg). You'll find videos on everything from howtos to different tips and tricks.
 
 For those who don't want to follow the video, here's some written instructions.
 
