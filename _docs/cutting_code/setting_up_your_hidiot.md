@@ -70,7 +70,7 @@ Now we need to add board definitions for the Digispark. The Digispark is an awes
 
 Start the Arduino IDE, and go to File -> Preferences. When the window appears click on the box to the right of the Additional Board Manager URLs line. Another Window will appear. Add the following URL to the box labeled Additional Board Manager URLs:
 
-	https://digistump.com/package_digistump_index.json
+	http://digistump.com/package_digistump_index.json
 
 Click on Ok, and then Ok on the previous Window to close it.
 
