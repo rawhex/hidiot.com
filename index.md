@@ -5,16 +5,14 @@ permalink: /
 navigation_weight: 10
 navigation_url: /
 
-masthead_image:           /assets/images/masthead-09-constructed.jpg
+masthead_image:           /assets/images/hidiots/hidiot_five_fan.jpg
 masthead_text:            Welcome to the HIDIOT
 masthead_subtext:         The Kit To Help You Hack And Play
-# masthead_countdown:       2017-05-14 07:12:00
-# masthead_countdown_title: "Countdown to Launch!"
-# masthead_countdown_color: red
-# kickstarter_link:         https://www.kickstarter.com/projects/2072712581/the-hidiot-card-sized-electronics-learning-for-eve?ref=eh1f67
-# kickstarter_message:      "Pre-Order Your HIDIOT On Kickstarter"
-newsletter_link:           https://app.convertkit.com/landing_pages/205401?v=6
-newsletter_message:        "Subscribe to our newsletter!"
+newsletter_link:          https://app.convertkit.com/landing_pages/205401?v=6
+newsletter_message:       "HIDIOT NEWSLETTER"
+shopify_button_address:   https://rawhex.com
+shopify_button_text:      "HIDIOT ONLINE SHOP"
+hidiot_description:       "The HIDIOT is the tiny electronics board that fits in your wallet! Specifically designed for people who've never soldered before, the HIDIOT is a project that helps you build a tiny but powerful computer from the component level up. You can learn everything that this device does right down to the electrical level."
 
 masthead_links:
   - url: /posts/
