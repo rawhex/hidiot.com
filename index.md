@@ -8,7 +8,7 @@ navigation_url: /
 masthead_image:           /assets/images/hidiots/hidiot_five_fan.jpg
 masthead_text:            Welcome to the HIDIOT
 masthead_subtext:         The Kit To Help You Hack And Play
-newsletter_link:          https://app.convertkit.com/landing_pages/205401?v=6
+newsletter_link:          https://app.convertkit.com/landing_pages/205401
 newsletter_message:       "HIDIOT NEWSLETTER"
 shopify_button_address:   https://rawhex.com
 shopify_button_text:      "HIDIOT ONLINE SHOP"
