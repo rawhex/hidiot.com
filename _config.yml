@@ -1,13 +1,9 @@
-# ----
-# Site
-
 title: The HIDIOT
 url: "https://docs.hidiot.com"
 baseurl:
 google_analytics: UA-97379221-3
 show_full_navigation: true
 
-# Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
 description: Documentation for using the HIDIOT
 author:
@@ -21,9 +17,6 @@ social:
     - https://github.com/rawhex/hidiot
     - https://facebook.com/rawhex
     - https://rawhex.com
-
-# -----
-# Build
 
 permalink: pretty
 
@@ -64,16 +57,6 @@ defaults:
       _comments:
         category: Group navigation links with this field
         order: Used to sort links in the navigation
-  # -
-  #   scope:
-  #     path: ""
-  #     type: "posts"
-  #   values:
-  #     _comments:
-  #       type: Marks the impact of this release
-
-# -----------
-# CloudCannon
 
 types:
   - minor
