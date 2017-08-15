@@ -80,6 +80,10 @@ LEDs are Light Emitting Diodes. Because they're diodes, they care about their or
 
 As with any other diode, check your orientation before soldering. If you're really unsure, don't snip the legs. If you make a mistake, the LEDs won't light up but the board will still work.
 
+Once you've done the LED1 LED, do the PWR LED on the other side of the board. Check the polarity matches the picture below to make sure you haven't got it the wrong way round.
+
+![PWR LED Polarity](/images/led_pwr_orientation.jpg)
+
 Ok, you're doing great! Not long to go now. Next we'll solder C2 and the two tact switches. If you haven't taken a break already, now would be a good time to do so. If you have, and you fancy another then you've already earned it! Just remember to switch off your soldering iron when it's not being used.
 
 Once you're ready to carry on, [click here](/building_a_hidiot/finishing_up/) to go to the next section.
