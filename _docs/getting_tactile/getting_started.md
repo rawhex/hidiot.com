@@ -158,7 +158,7 @@ As well as ```a > b```, we can use different symbols to mean different things. T
 
 These types of operators are called conditional operators, because they're used to compare values.
 
-The ```||``` symbol is a *logical operator*. Logical operators connect two or more statements together. We can use these in control structures to chain conditions together.
+The ```||``` symbol is a *logical operator*. Logical operators connect two or more statements together and are used to evaluate conditions based on what's called *boolean logic*. We'll look at boolean logic in more detail in a later tutorial.
 
 The ```||``` symbol is the logical operator for *OR*. In our if statement this means:
 ```
@@ -170,7 +170,7 @@ if (but1State equals HIGH OR but2State equals HIGH) {
 ```
 The ```else``` clause simply means "If the above isn't true, do this instead".
 
-As with comparison operators, there are whole bunch of logical operators, like AND, OR, NOT and XOR. Rather than fill your head with them right now we'll look at operators a we use them. For now, these are the only two logical operators you need to be aware of:
+As with comparison operators, there are whole bunch of logical operators, like AND, OR, NOT and XOR. Rather than fill your head with them right now we'll look at operators as we use them. For now, these are the only two logical operators you need to be aware of:
 
 |Character|Operator|Meaning|Example|
 |---------|--------|-------|-------|
@@ -179,7 +179,7 @@ As with comparison operators, there are whole bunch of logical operators, like A
 
 So far we've looked at how to use buttons to turn on an LED. We've learned what a floating pin is and why it's bad. We've also looked at some logical operators.
 
-In the next tutorial we'll learn about the importance of *debouncing* and use the HIDIOT's buttons to control your computer. We'll build a photo booth trigger and we'll our own PC volume control buttons.
+In the [next section](/getting_tactile/improving_our_switch/) we'll learn about other ways of managing buttons, or in our case tact switches.
 
 ### What To Do Next
 
@@ -189,6 +189,3 @@ Have you ever wondered why computers use true and false, and 1 and 0? The answer
 
 Adam Westbrook made a brilliant short film about Shannon's role in the leap from the analogue to the digital age. Shannon was initially concerned with communication, but in the process he laid the foundation for the logic used in computers today.
 
-{% youtube rJszZebxL3E %}
-
-If you want to understand how logic operators work under the hood, SnugglyHappyMathTime has a really great introduction to logic in maths. Don't worry if this goes over your head. We'll make sure we spend some time explaining operators as we encounter them.

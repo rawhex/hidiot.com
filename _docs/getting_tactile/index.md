@@ -23,7 +23,7 @@ The [Getting started with tact switches](/getting_tactile/getting_started/) proj
 
 #### Controlling computers with tact switches
 
-This project builds on our previous projects to use buttons to make things happen on a computer. We'll create a photo booth button and a USB volume controller.
+This project builds on our previous projects to use tact switches to make things happen on a computer. We'll learn about how to fix common problems when using tact switches and a build a USB volume controller.
 
 [Controlling computers with tact switches](/getting_tactile/controlling_computers/) should take around 30 minutes including breaks and videos.
 
