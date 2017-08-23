@@ -53,7 +53,7 @@ Upload this code to your HIDIOT and give it a try. What happens when you press b
 
 If you noticed the LED getting dimmer when you press both buttons, try to think why that might be the case. If you thought it was because the LED turns on and off quicker than we can see, then you were right!
 
-If we fix this, we could tell the HIDIOT to turn off the LED if both switches are pressed at the same time. This is an easy way to make the two switches to act as a third.
+If we fix this, we could tell the HIDIOT to turn off the LED if both switches are pressed at the same time. This is an easy way to make the two switches act as a third.
 
 It might not seem like much but you've created a device that can turn anything on or off. You can reuse this code to perform any on/off type action. To do this, replace the contents of ```on()``` and ```off()``` with code to do whatever you want to control. If you replace the LED with the right relay switch you could control power to a desktop lamp, pool pump or a PC. 
 
@@ -61,7 +61,7 @@ If you're interested in finding more about how you could use a relay to control 
 
 {% youtube Vs86QPCGfs4 %}
 
-> We haven't tried relays with mains voltage here on the HIDIOT. If you decided to try it out, you'll have to put protect yourself from the back-emf problem. Mains electricity can kill, so make sure you stay safe at all times and only try this if you absolutely know what you're doing.
+> We haven't tried relays with mains voltage here on the HIDIOT. If you'd like to try it out, you'll have to protect yourself from the back-emf problem. Mains electricity can kill, so make sure you stay safe at all times and only try this if you absolutely know what you're doing.
 
 In the meantime we need to take care of the problem with pressing both buttons at the same time. It's probably fine for use with an LED. If we reused this code in something that takes time to switch on and switch off (like a relay) it could damage it, or even cause a fire.
 
@@ -94,7 +94,7 @@ Now that we've built and tested a device that uses two buttons to control someth
 
 ### Using a tact switch as an on/off button
 
-So far we've learned how to use the tact switches to do some basic control. What if we just want to push a single button to turn the LED on or off? We can do this by keeping track of what's happening. If we use variables to store information about our HIDIOT's state, we can use logical operators to act based on the state. The result will be something called an **alternating action switch**.
+So far we've learned how to use the tact switches to do some basic control. What if we just want to push a single button to turn the LED on or off? We can do this by keeping track of what's happening using a variable. We can use the logical operators from the last section to act based on certain conditions, like pushing or releasing S1 an odd or even number of times. The result will be something called an **alternating action switch**.
 
 Firstly, we'll need to add some global variables where we defined ```but1State```:
 
@@ -103,7 +103,7 @@ Firstly, we'll need to add some global variables where we defined ```but1State``
 	int but1Temp = 0;
 	int ledState = LOW;
 
-We use the ```but1Temp``` to store the current state of S1. This is lightly different to previous examples, but all will be clear when we come to it.
+We use the ```but1Temp``` to store the current state of S1. This is slightly different to previous examples, but all will be clear when we come to it.
 
 The ```ledState``` variable is used to store the LEDs state, which is either off or on.
 
@@ -157,7 +157,7 @@ There are lots of ways to fix contact bouncing. The easiest way is in software. 
 
 The simplest method is to wait a few milliseconds after registering a press. We can use the ```delay()``` function to stop our code picking up any contact bounces. There's just one small problem with this approach.
 
-When we use ```delay()``` the HIDIOT stops working for however long necessary. This is fine for our example but has it's own problems. If we were using USB our delay might cause things to stop working if the HIDIOT can't talk to the USB host.
+When we use ```delay()``` the HIDIOT stops working for however long is necessary. This is fine for our example but has it's own problems. If we were using USB our delay might cause things to stop working if the HIDIOT can't talk to the USB host.
 
 We can create our own delay using two variables and the ```millis()``` function. We can check the button twice. If more than a certain amount of time has passed we can act and avoid the contact bounce effect. We don't need to wait for long, a few milliseconds should be enough.
 
