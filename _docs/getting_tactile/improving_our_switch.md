@@ -73,7 +73,7 @@ We know that a tact switch is pressed or closed when ```digitalRead()``` tells u
 	    on();
 	  } 
 	  if (but2State == LOW && but1State == HIGH) {
-	  off();
+	    off();
 	  }
 
 Once you've uploaded the code, we can test it to make sure it works. Try the following steps to test your code. 
