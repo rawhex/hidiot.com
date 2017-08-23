@@ -45,7 +45,7 @@ We now add another ```if``` statement to catch S2 presses and turn the LED off.
 	    on();
 	  } 
 	  if (but2State == LOW) {
-		off();
+        off();
 	  }
 	}
 
