@@ -5,7 +5,7 @@ permalink: /faq/
 navigation_weight: 60
 navigation_url: /faq/
 
-masthead_image:     /assets/images/hidiots/hidiot_angle_assembled_two.jpg
+masthead_image:     /assets/images/hidiots/hidiot_angle_assembled_two_compressed.jpg
 masthead_text:      FAQ
 masthead_subtext:   Frequently Asked Questions
 masthead_url:
