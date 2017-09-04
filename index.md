@@ -12,15 +12,15 @@ newsletter_link:          https://app.convertkit.com/landing_pages/205401
 newsletter_message:       "HIDIOT NEWSLETTER"
 shopify_button_address:   https://rawhex.com
 shopify_button_text:      "HIDIOT ONLINE SHOP"
-hidiot_description:       "The HIDIOT is the tiny electronics board that fits in your wallet! Specifically designed for people who've never soldered before, the HIDIOT is a project that helps you build a tiny but powerful computer from the component level up. You can learn everything that this device does right down to the electrical level."
+hidiot_description:       "The HIDIOT is the code-crafting, hardware-hacking project that fits in your pocket!"
 
 masthead_links:
-  - url: /posts/
-    title: BLOG
-  - url: https://www.reddit.com/r/hidiot/
-    title: COMMUNITY
-  - url: /events/
-    title: EVENTS
+  - url: https://rawhex.com/collections/hidiot-kits
+    title: BUY
   - url: /faq/
     title: LEARN
+  - url: https://www.reddit.com/r/hidiot/
+    title: DISCUSS
+  - url: /events/
+    title: EVENTS
 ---
