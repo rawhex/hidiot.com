@@ -2,7 +2,7 @@
 layout:             events
 title:              Events
 permalink:          /events/
-navigation_weight:  40
+navigation_weight:  70
 navigation_url:     /events/
 
 masthead_image:     /assets/images/events/bsides.png
