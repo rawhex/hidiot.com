@@ -17,7 +17,7 @@ In this tutorial, you'll:
 * Make your HIDIOT pretend to be a keyboard
 * Create a programmers passport using an automated keyboard program
 * Draw some mathematical pictures by making the HIDIOT pretend to be a mouse
-* 
+
 #### Work smarter, not harder
 
 We'll start by learning how the HIDIOT can write characters in Notepad by making an automated keyboard using the [DigiKeyboard](https://digistump.com/wiki/digispark/tutorials/digikeyboard) library.
