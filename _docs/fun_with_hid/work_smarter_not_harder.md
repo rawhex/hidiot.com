@@ -141,4 +141,4 @@ You could even use the HIDIOT to lock the computer after a random amount of time
 
 {% youtube vX1tDk_iwOo %}
 
-In the next part of this tutorial we're going to build a [programmer passport](/fun_with_hid/showing_off_your_credentials/), so you can show off your credentials with style. Can you make your programmer passport cooler than Frank Zhao's business card?
+In the next part of this tutorial we're going to build a [programmer passport](#), so you can show off your credentials with style. Can you make your programmer passport cooler than Frank Zhao's business card?
