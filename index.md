@@ -24,8 +24,8 @@ The code samples used in this tutorial are available on our [Github](https://git
 ### Getting To Grips With HIDIOT
 
 5. [Exploring Morse Code](/exploring_morse_code/index/)
-6. Make a Programmer Passport
-7. Getting tactile with buttons
+6. [Fun with HID](/fun_with_hid/index/)
+7. [Getting tactile with buttons](/getting_tactile/)
 
 ### Cool Projects
 
@@ -37,5 +37,3 @@ The code samples used in this tutorial are available on our [Github](https://git
 
 1. Common problems
 2. Caring for your HIDIOT
-
-
