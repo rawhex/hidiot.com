@@ -8,7 +8,15 @@ Now you have a fully built HIDIOT in your hands, (or on your desk, or ... somewh
 
 Because the HIDIOT is a gateway to professional embedded development (or in other words, doing cool hardware hacking) we're going to use professional tools for our projects.
 
-Currently we only support Windows 10 for development. The HIDIOT will work on other Operating Systems and platforms, and you can even develop on it. It's just that we don't have the capacity to support every possible platform for now. If you want to use the HIDIOT in a particular way and can't, tell [the community](https://www.reddit.com/r/hidiot/) and we'll see what we can do.
+> The HIDIOT is specifically designed for use with Windows 10, although it will work on other Operating Systems and platforms. If you're not using Windows 10, you can ask for help in [the community subreddit](https://www.reddit.com/r/hidiot/).
+
+Here's some handy links for people using other Operating Systems:
+
+* [Ubuntu 16.04](https://www.youtube.com/watch?v=EkvJvWhg4wA)
+* [Windows 7](https://pay.reddit.com/r/hidiot/comments/6mfjdo/windows_7/)
+* [Mac OS Sierra](https://pay.reddit.com/r/hidiot/comments/6xl774/setting_up_and_using_the_hidiot_on_macos_sierra/)
+
+Check through the above for your Operating System and ask the [community subreddit](https://www.reddit.com/r/hidiot/) if you're stuck.
 
 This tutorial is split into 2 parts:
 
