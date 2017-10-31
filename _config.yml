@@ -32,7 +32,6 @@ markdown: kramdown
 theme: hidiot-theme
 future: true # render posts in the future, to enable events
 gems:
-  - jekyll-feed
   - jekyll-paginate-v2
   - jekyll-minifier
 exclude:
