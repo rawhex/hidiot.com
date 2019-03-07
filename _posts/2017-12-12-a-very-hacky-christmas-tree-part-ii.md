@@ -1,11 +1,11 @@
 ---
 layout: post
-title: A Very hacky Christmas tree: Part II
+title: A Very hacky Christmas tree Part II
 date: 2017-12-12 12:00:00 +0000
 categories: hidiot
 color: orange
-image: https://beta.rawhex.com/img/CM-EN-8155_1024x1024.jpg
-image_alt: A Very hacky Christmas tree: Part II
+image: https://www.rawhex.com/img/CM-EN-8155_1024x1024.jpg
+image_alt: A Very hacky Christmas tree Part II
 canonical_link: https://www.rawhex.com/blog/2017/12/12/a_very_hacky_christmas_tree_part_2/
 ---
 
