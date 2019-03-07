@@ -15,7 +15,7 @@ shopify_button_text:      "HIDIOT ONLINE SHOP"
 hidiot_description:       "The HIDIOT is the code-crafting, hardware-hacking project that fits in your pocket!"
 
 masthead_links:
-  - url: https://rawhex.com/collections/hidiot-kits
+  - url: https://www.tindie.com/stores/RawHex/
     title: BUY
   - url: /faq/
     title: LEARN
